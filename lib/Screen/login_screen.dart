@@ -1,6 +1,9 @@
+import 'package:ajisetiawan/Screen/signup.dart';
+import 'package:ajisetiawan/Screen/signup.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:hive_flutter/hive_flutter.dart';
+import 'package:ajisetiawan/Screen/dashboard.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({Key? key}) : super(key: key);
@@ -111,7 +114,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   box.put('isLogin', true);
 
                   Navigator.of(context).pushReplacement(
-                    MaterialPageRoute(builder: (_) => LoginScreen()),
+                    MaterialPageRoute(builder: (_) => Dashboard()),
                   );
                 } else {
                   ScaffoldMessenger.of(context).showSnackBar(
@@ -192,7 +195,7 @@ class _LoginScreenState extends State<LoginScreen> {
               ),
               GestureDetector(
                   onTap: () {
-                    Route route = MaterialPageRoute(builder: (context) => LoginScreen());
+                    Route route = MaterialPageRoute(builder: (context) => SignUp());
                     Navigator.push(context, route);
                   },
                   child: Text("Sign Up",
