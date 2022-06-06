@@ -13,6 +13,18 @@ class Dashboard extends StatelessWidget {
       appBar: AppBar(
         title: Text('Home Screen'),
       ),
-      
+      body: Column(children: [
+        Container(
+          padding: EdgeInsets.all(8.0),
+        ),
+        Text(
+          'Dashboard',
+          style: TextStyle(fontWeight: FontWeight.bold, fontSize: 15),
+        ),
+        Container(
+          padding: EdgeInsets.all(210.0),
+        ),
+      ]),
+    );
   }
 }
