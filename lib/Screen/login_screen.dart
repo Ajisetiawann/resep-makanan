@@ -30,7 +30,7 @@ class _LoginScreenState extends State<LoginScreen> {
           Expanded(
             child: Image.asset(
               'images/20220606_211017-removebg-preview.png',
-              height: 20,
+              height: 30,
             ),
           ),
           Text(
@@ -102,7 +102,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 ),
               ),
               onPressed: () {
-                if (userNameController.text == 'user_uts' && passwordController.text == "pass_uts") {
+                if (userNameController.text == 'tasty' && passwordController.text == "tasty") {
                   ScaffoldMessenger.of(context).showSnackBar(
                     SnackBar(
                       content: Text('berhasil login'),
