@@ -45,7 +45,7 @@ class _SplashScreenState extends State<SplashScreen> {
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Image.asset(
-          'images/20220606_211017-removebg-preview.png',
+          'images/20220606_232726[1].jpg',
         ),
         CircularProgressIndicator(),
       ],
