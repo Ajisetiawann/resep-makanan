@@ -29,7 +29,7 @@ class _LoginScreenState extends State<LoginScreen> {
           ),
           Expanded(
             child: Image.asset(
-              'images/undraw_Login_re_4vu2.png',
+              'images/20220606_211017-removebg-preview.png',
               height: 20,
             ),
           ),
