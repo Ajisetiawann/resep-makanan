@@ -3,7 +3,7 @@ import 'package:ajisetiawan/Screen/login_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:hive_flutter/hive_flutter.dart';
-import 'package:ajisetiawan/Screen/Dashboard.dart';
+import 'package:ajisetiawan/Screen/dashboard.dart';
 
 class SignUp extends StatefulWidget {
   const SignUp({Key? key}) : super(key: key);
