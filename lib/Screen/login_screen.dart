@@ -35,7 +35,7 @@ class _LoginScreenState extends State<LoginScreen> {
           ),
           Text(
             'Selamat Datang Di TastyPedia',
-            style: TextStyle(fontWeight: FontWeight.bold, fontSize: 30),
+            style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
           ),
           Text(
             'Kumpulan berbagai resep masakan',
