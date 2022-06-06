@@ -34,11 +34,11 @@ class _LoginScreenState extends State<LoginScreen> {
             ),
           ),
           Text(
-            'Welcome back!',
+            'Selamat Datang Di TastyPedia',
             style: TextStyle(fontWeight: FontWeight.bold, fontSize: 30),
           ),
           Text(
-            'Log in to your existant account of Q Allure',
+            'Kumpulan berbagai resep masakan',
             style: TextStyle(fontWeight: FontWeight.w400, fontSize: 12, height: 2),
           ),
           Padding(
