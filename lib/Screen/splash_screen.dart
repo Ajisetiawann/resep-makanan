@@ -1,11 +1,7 @@
 import 'dart:async';
 
-import 'package:ajisetiawan/Screen/dashboard.dart';
 import 'package:flutter/material.dart';
 import 'package:hive_flutter/hive_flutter.dart';
-import 'package:ajisetiawan/Screen/dashboard.dart';
-
-import 'login_screen.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({Key? key}) : super(key: key);
