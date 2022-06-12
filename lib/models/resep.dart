@@ -10,7 +10,7 @@ class Resep {
     return Resep(name: json['name'] as String, images: json['images'][0]['hostedLargeUrl'] as String, rating: json['rating'] as double, totalTime: json['totalTime'] as String);
   }
 
-  static List<Resep> recipesFromSnapshot(List snapshot) {
+  static List<Resep> resepFromSnapshot(List snapshot) {
     return snapshot.map((data) {
       return Resep.fromJson(data);
     }).toList();

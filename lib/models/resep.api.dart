@@ -22,6 +22,6 @@ class RecipeApi {
       _temp.add(i['content']['details']);
     }
 
-    return Resep.recipesFromSnapshot(_temp);
+    return Resep.resepFromSnapshot(_temp);
   }
 }
