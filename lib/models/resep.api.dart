@@ -3,7 +3,7 @@ import 'package:resep_makanan/models/resep.dart';
 import 'package:http/http.dart' as http;
 
 class RecipeApi {
-  static Future<List<Resep>> getRecipe() async {
+  static Future<List<Resep>> getResep() async {
     var uri = Uri.https('yummly2.p.rapidapi.com', '/feeds/list', {
       "limit": "24",
       "start": "0"

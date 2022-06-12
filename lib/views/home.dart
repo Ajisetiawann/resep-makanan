@@ -9,17 +9,17 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  List<Resep> _recipes;
+  List<Resep> _resep;
   bool _isLoading = true;
 
   @override
   void initState() {
     super.initState();
-    getRecipes();
+    getResep();
   }
 
-  Future<void> getRecipes() async {
-    _recipes = await RecipeApi.getRecipe();
+  Future<void> getResep() async {
+    _resep = await RecipeApi.getResep();
     setState(() {
       _isLoading = false;
     });
@@ -41,9 +41,9 @@ class _HomePageState extends State<HomePage> {
         body: _isLoading
             ? Center(child: CircularProgressIndicator())
             : ListView.builder(
-                itemCount: _recipes.length,
+                itemCount: _resep.length,
                 itemBuilder: (context, index) {
-                  return ResepCard(title: _recipes[index].name, cookTime: _recipes[index].totalTime, rating: _recipes[index].rating.toString(), thumbnailUrl: _recipes[index].images);
+                  return ResepCard(title: _resep[index].name, cookTime: _resep[index].totalTime, rating: _resep[index].rating.toString(), thumbnailUrl: _resep[index].images);
                 },
               ));
   }
