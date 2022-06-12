@@ -18,6 +18,6 @@ class Resep {
 
   @override
   String toString() {
-    return 'Recipe {name: $name, image: $images, rating: $rating, totalTime: $totalTime}';
+    return 'Resep {name: $name, image: $images, rating: $rating, totalTime: $totalTime}';
   }
 }
