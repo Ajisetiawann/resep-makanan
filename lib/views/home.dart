@@ -19,7 +19,7 @@ class _HomePageState extends State<HomePage> {
   }
 
   Future<void> getResep() async {
-    _resep = await RecipeApi.getResep();
+    _resep = await ResepApi.getResep();
     setState(() {
       _isLoading = false;
     });
