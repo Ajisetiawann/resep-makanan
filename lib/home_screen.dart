@@ -76,73 +76,18 @@ class _HomeScreenState extends State<HomeScreen> {
                           ),
                           Card(
                             shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
-                            child: Column(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: <Widget>[
-                                SvgPicture.asset(
-                                  'images/taxi-fill.svg',
-                                  height: 50,
-                                  alignment: Alignment.center,
-                                ),
-                                Text('Ubers')
-                              ],
-                            ),
                           ),
                           Card(
                             shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
-                            child: Column(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: <Widget>[
-                                SvgPicture.asset(
-                                  'images/shopping-basket-fill.svg',
-                                  height: 50,
-                                  alignment: Alignment.center,
-                                ),
-                                Text('Groceries')
-                              ],
-                            ),
                           ),
                           Card(
                             shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
-                            child: Column(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: <Widget>[
-                                SvgPicture.asset(
-                                  'images/heart-fill.svg',
-                                  height: 50,
-                                  alignment: Alignment.center,
-                                ),
-                                Text('Dates')
-                              ],
-                            ),
                           ),
                           Card(
                             shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
-                            child: Column(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: <Widget>[
-                                SvgPicture.asset(
-                                  'images/numbers-fill.svg',
-                                  height: 50,
-                                  alignment: Alignment.center,
-                                ),
-                                Text('Stats')
-                              ],
-                            ),
                           ),
                           Card(
                             shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
-                            child: Column(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: <Widget>[
-                                SvgPicture.asset(
-                                  'images/bank-card-fill.svg',
-                                  height: 50,
-                                  alignment: Alignment.center,
-                                ),
-                                Text('Cards')
-                              ],
-                            ),
                           ),
                         ],
                         crossAxisCount: 2),
