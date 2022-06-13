@@ -16,7 +16,6 @@ class DetailResep extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: Colors.redAccent[700],
         title: Row(
-          mainAxisAlignment: MainAxisAlignment.center,
           children: [
             SizedBox(width: 10),
             Text('Detail'),
