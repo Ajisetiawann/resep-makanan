@@ -16,8 +16,7 @@ class _HomeScreenState extends State<HomeScreen> {
             backgroundColor: Colors.redAccent[700],
             title: Row(
               children: [
-                Image.asset('images/gambar1.png', height: 100),
-                Text('TastyPedia'),
+                Image.asset('images/gambar1.png', height: 120),
               ],
             )),
         body: Stack(children: <Widget>[
