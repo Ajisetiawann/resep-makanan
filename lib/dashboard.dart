@@ -38,7 +38,7 @@ class _Dashboard extends State<Dashboard> {
             children: [
               Icon(Icons.restaurant_menu),
               SizedBox(width: 10),
-              Text('TastyPedia'),
+              Text('Menu'),
             ],
           ),
         ),

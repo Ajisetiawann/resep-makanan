@@ -43,7 +43,7 @@ class _BottomNaviState extends State<BottomNavi> {
               activeIcon: Icon(Icons.restaurant_menu_outlined, color: Colors.blue)),
           BottomNavigationBarItem(
               icon: Icon(
-                Icons.payment_sharp,
+                Icons.payment,
                 color: Colors.grey,
               ),
               label: 'Payment',

@@ -20,7 +20,7 @@ class DetailResep extends StatelessWidget {
           children: [
             Icon(Icons.restaurant_menu),
             SizedBox(width: 10),
-            Text('TastyPedia'),
+            Text('Detail Makanan'),
           ],
         ),
       ),
