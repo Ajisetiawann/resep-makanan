@@ -40,7 +40,7 @@ class _HomeScreenState extends State<HomeScreen> {
                             backgroundImage: AssetImage('images/20220612_215401.jpg'),
                           ),
                           SizedBox(
-                            width: 16,
+                            width: 10,
                           ),
                           Column(
                             mainAxisAlignment: MainAxisAlignment.center,
