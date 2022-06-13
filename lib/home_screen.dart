@@ -15,7 +15,6 @@ class _HomeScreenState extends State<HomeScreen> {
         appBar: AppBar(
             backgroundColor: Colors.redAccent[700],
             title: Row(
-              mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Image.asset('images/gambar1.png', height: 120),
               ],
@@ -41,7 +40,7 @@ class _HomeScreenState extends State<HomeScreen> {
                             backgroundImage: AssetImage('images/20220612_215401.jpg'),
                           ),
                           SizedBox(
-                            width: 16,
+                            width: 10,
                           ),
                           Column(
                             mainAxisAlignment: MainAxisAlignment.center,
