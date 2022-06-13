@@ -18,9 +18,8 @@ class DetailResep extends StatelessWidget {
         title: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Icon(Icons.restaurant_menu),
             SizedBox(width: 10),
-            Text('Detail Menu'),
+            Text('Detail'),
           ],
         ),
       ),
