@@ -62,17 +62,6 @@ class _HomeScreenState extends State<HomeScreen> {
                         children: <Widget>[
                           Card(
                             shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
-                            child: Column(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: <Widget>[
-                                SvgPicture.asset(
-                                  'images/shopping-cart-2-fill.svg',
-                                  height: 50,
-                                  alignment: Alignment.center,
-                                ),
-                                Text('Shopping')
-                              ],
-                            ),
                           ),
                           Card(
                             shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
