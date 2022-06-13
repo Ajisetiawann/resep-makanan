@@ -14,7 +14,7 @@ class DetailResep extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.yellow,
+        backgroundColor: Colors.redAccent[700],
         title: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
