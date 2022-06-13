@@ -15,9 +15,8 @@ class _HomeScreenState extends State<HomeScreen> {
         appBar: AppBar(
             backgroundColor: Colors.redAccent[700],
             title: Row(
-              mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Image.asset('images/20220612_224201.png', height: 80),
+                Image.asset('images/gambar1.png', height: 80),
                 Text('TastyPedia'),
               ],
             )),
