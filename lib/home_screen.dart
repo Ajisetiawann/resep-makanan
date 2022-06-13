@@ -37,7 +37,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         children: <Widget>[
                           CircleAvatar(
                             radius: 32,
-                            backgroundImage: AssetImage('images/20220612_215401.jpg'),
+                            backgroundImage: AssetImage('images/gambar3.png'),
                           ),
                           SizedBox(
                             width: 10,
