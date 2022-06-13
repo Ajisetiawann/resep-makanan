@@ -18,7 +18,7 @@ class DetailResep extends StatelessWidget {
         title: Row(
           children: [
             SizedBox(width: 10),
-            Text('Detail'),
+            Text('Detail Menu'),
           ],
         ),
       ),
