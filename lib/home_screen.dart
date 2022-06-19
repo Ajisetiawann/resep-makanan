@@ -55,7 +55,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       )),
                   Expanded(
                     child: GridView.count(
-                        mainAxisSpacing: 50,
+                        mainAxisSpacing: 10,
                         crossAxisSpacing: 10,
                         primary: false,
                         children: <Widget>[
