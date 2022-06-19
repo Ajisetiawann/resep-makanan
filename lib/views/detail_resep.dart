@@ -7,8 +7,9 @@ class DetailResep extends StatelessWidget {
   final String rating;
   final String totalTime;
   final String description;
+  final String videoUrl;
 
-  DetailResep({required this.name, required this.images, required this.rating, required this.totalTime, required this.description});
+  DetailResep({required this.name, required this.images, required this.rating, required this.totalTime, required this.description, required this.videoUrl});
 
   @override
   Widget build(BuildContext context) {
@@ -26,7 +27,7 @@ class DetailResep extends StatelessWidget {
         child: Column(
           mainAxisSize: MainAxisSize.max,
           children: [
-            ResepCard(title: name, rating: rating, cookTime: totalTime, thumbnailUrl: images),
+            ResepCard(title: name, rating: rating, cookTime: totalTime, thumbnailUrl: images, videoUrl: videoUrl),
             Container(
                 margin: EdgeInsets.symmetric(horizontal: 22, vertical: 10),
                 child: Column(mainAxisSize: MainAxisSize.max, crossAxisAlignment: CrossAxisAlignment.start, children: [

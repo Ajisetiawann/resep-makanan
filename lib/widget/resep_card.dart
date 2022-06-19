@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:resep_makanan/views/detail_video.dart';
 
 class ResepCard extends StatelessWidget {
   final String title;
   final String rating;
   final String cookTime;
   final String thumbnailUrl;
+  final String videoUrl;
 
-  const ResepCard({required this.title, required this.rating, required this.cookTime, required this.thumbnailUrl});
+  const ResepCard({required this.title, required this.rating, required this.cookTime, required this.thumbnailUrl, required this.videoUrl});
 
   @override
   Widget build(BuildContext context) {
@@ -45,7 +47,13 @@ class ResepCard extends StatelessWidget {
                   margin: EdgeInsets.all(10),
                   decoration: BoxDecoration(color: Colors.black.withOpacity(0.4), borderRadius: BorderRadius.circular(55)),
                   child: InkWell(
-                    onTap: () => {},
+                    onTap: () => {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => DetailVideo(),
+                          ))
+                    },
                     child: Row(
                       children: [
                         Icon(

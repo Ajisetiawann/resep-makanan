@@ -48,12 +48,12 @@ class _Dashboard extends State<Dashboard> {
                 itemCount: _resep.length,
                 itemBuilder: (context, index) {
                   return GestureDetector(
-                    child: ResepCard(title: _resep[index].name, rating: _resep[index].rating.toString(), cookTime: _resep[index].totalTime, thumbnailUrl: _resep[index].images),
+                    child: ResepCard(title: _resep[index].name, rating: _resep[index].rating.toString(), cookTime: _resep[index].totalTime, thumbnailUrl: _resep[index].images, videoUrl: _resep[index].videoUrl),
                     onTap: () => {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => DetailResep(name: _resep[index].name, rating: _resep[index].rating.toString(), totalTime: _resep[index].totalTime, images: _resep[index].images, description: _resep[index].description),
+                            builder: (context) => DetailResep(name: _resep[index].name, rating: _resep[index].rating.toString(), totalTime: _resep[index].totalTime, images: _resep[index].images, description: _resep[index].description, videoUrl: _resep[index].videoUrl),
                           ))
                     },
                   );

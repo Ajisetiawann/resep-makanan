@@ -4,11 +4,12 @@ class Resep {
   final String rating;
   final String totalTime;
   final String description;
+  final String videoUrl;
 
-  Resep({required this.name, required this.images, required this.rating, required this.totalTime, required this.description});
+  Resep({required this.name, required this.images, required this.rating, required this.totalTime, required this.description, required this.videoUrl});
 
   factory Resep.fromJson(dynamic json) {
-    return Resep(name: json['name'] as String, images: json['thumbnail_url'] as String, rating: json['country'] as String, totalTime: json['total_time_minutes'] != null ? json['total_time_minutes'].toString() + " menit" : "30 menit", description: json['description'] != null ? json['description'] : " ");
+    return Resep(name: json['name'] as String, images: json['thumbnail_url'] as String, rating: json['country'] as String, totalTime: json['total_time_minutes'] != null ? json['total_time_minutes'].toString() + " menit" : "30 menit", description: json['description'] != null ? json['description'] : " ", videoUrl: json['original_video_url'] != null ? json['origina;_video_url'] : 'no video');
   }
   static List<Resep> resepFromSnapshot(List snapshot) {
     return snapshot.map((data) {
