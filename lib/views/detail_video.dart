@@ -54,6 +54,16 @@ class _DetailVideoState extends State<DetailVideo> {
               )
             : Container(),
       ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          setState(() {
+            playerController.value.isPlaying ? playerController.pause() : playerController.play();
+          });
+        },
+        child: Icon(
+          playerController.value.isPlaying ? Icons.pause : Icons.play_arrow,
+        ),
+      ),
     );
   }
 }
