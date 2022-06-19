@@ -51,7 +51,9 @@ class ResepCard extends StatelessWidget {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => DetailVideo(),
+                            builder: (context) => DetailVideo(
+                              videoUrl: videoUrl,
+                            ),
                           ))
                     },
                     child: Row(
