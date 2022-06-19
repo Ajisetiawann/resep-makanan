@@ -16,13 +16,18 @@ class _HomeScreenState extends State<HomeScreen> {
             backgroundColor: Colors.redAccent[700],
             title: Row(
               children: [
-                Image.asset('images/gambar1.png', height: 120),
+                Image.asset('images/gambarhome.png', height: 120),
               ],
             )),
         body: Stack(children: <Widget>[
           Container(
             height: size.height * .4,
-            decoration: BoxDecoration(image: DecorationImage(alignment: Alignment.topCenter, image: AssetImage('images/gambar.png'))),
+            decoration: BoxDecoration(
+                image: DecorationImage(
+                    alignment: Alignment.topCenter,
+                    image: AssetImage(
+                      'images/gambar.png',
+                    ))),
           ),
           SafeArea(
             child: Padding(
