@@ -26,7 +26,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 image: DecorationImage(
                     alignment: Alignment.topCenter,
                     image: AssetImage(
-                      'images/gambarr.png',
+                      'images/iPhone 13 mini - 1.png',
                     ))),
           ),
           SafeArea(
