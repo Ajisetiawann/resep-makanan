@@ -48,22 +48,49 @@ class _DetailVideoState extends State<DetailVideo> {
       ),
       body: Center(
         child: playerController.value.isInitialized
-            ? AspectRatio(
-                aspectRatio: playerController.value.aspectRatio,
-                child: VideoPlayer(playerController),
+            ? Container(
+                alignment: Alignment.topCenter,
+                child: buildVideo(),
               )
-            : Container(),
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {
-          setState(() {
-            playerController.value.isPlaying ? playerController.pause() : playerController.play();
-          });
-        },
-        child: Icon(
-          playerController.value.isPlaying ? Icons.pause : Icons.play_arrow,
-        ),
+            : Container(height: 200, child: Center(child: CircularProgressIndicator())),
       ),
     );
   }
+
+  Widget buildVideo() => Stack(
+        children: <Widget>[
+          buildVideoPlayer(),
+          Positioned.fill(child: buildBasicOverlay())
+        ],
+      );
+
+  Widget buildVideoPlayer() => AspectRatio(
+        aspectRatio: playerController.value.aspectRatio,
+        child: VideoPlayer(playerController),
+      );
+
+  Widget buildBasicOverlay() => GestureDetector(
+        behavior: HitTestBehavior.opaque,
+        onTap: () => playerController.value.isPlaying ? playerController.pause() : playerController.play(),
+        child: Stack(
+          children: <Widget>[
+            buildPlay(),
+            Positioned(bottom: 0, left: 0, right: 0, child: buildIndicator())
+          ],
+        ),
+      );
+
+  Widget buildIndicator() => VideoProgressIndicator(playerController, allowScrubbing: true);
+
+  Widget buildPlay() => playerController.value.isPlaying
+      ? Container()
+      : Container(
+          alignment: Alignment.center,
+          color: Colors.black26,
+          child: Icon(
+            Icons.play_arrow,
+            color: Colors.white,
+            size: 80,
+          ),
+        );
 }
