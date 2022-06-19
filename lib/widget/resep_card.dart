@@ -42,30 +42,33 @@ class ResepCard extends StatelessWidget {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Container(
-                  padding: EdgeInsets.all(5),
-                  margin: EdgeInsets.all(10),
-                  decoration: BoxDecoration(color: Colors.black.withOpacity(0.4), borderRadius: BorderRadius.circular(55)),
-                  child: InkWell(
-                    onTap: () => {
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => DetailVideo(
-                              videoUrl: videoUrl,
-                            ),
-                          ))
-                    },
-                    child: Row(
-                      children: [
-                        Icon(
-                          Icons.play_circle_fill_rounded,
-                          color: Colors.yellow,
-                          size: 18,
-                        ),
-                        SizedBox(width: 7),
-                        Text('Play Video')
-                      ],
+                Visibility(
+                  visible: videoUrl != 'no Video' ? true : false,
+                  child: Container(
+                    padding: EdgeInsets.all(5),
+                    margin: EdgeInsets.all(10),
+                    decoration: BoxDecoration(color: Colors.black.withOpacity(0.4), borderRadius: BorderRadius.circular(55)),
+                    child: InkWell(
+                      onTap: () => {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => DetailVideo(
+                                videoUrl: videoUrl,
+                              ),
+                            ))
+                      },
+                      child: Row(
+                        children: [
+                          Icon(
+                            Icons.play_circle_fill_rounded,
+                            color: Colors.yellow,
+                            size: 18,
+                          ),
+                          SizedBox(width: 7),
+                          Text('Play Video')
+                        ],
+                      ),
                     ),
                   ),
                 ),
