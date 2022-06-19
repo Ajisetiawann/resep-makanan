@@ -1,6 +1,4 @@
 import 'package:resep_makanan/dashboard.dart';
-import 'package:resep_makanan/more.dart';
-import 'package:resep_makanan/payment.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:resep_makanan/home_screen.dart';
@@ -15,8 +13,6 @@ class _BottomNaviState extends State<BottomNavi> {
   final List<Widget> body = [
     HomeScreen(),
     Dashboard(),
-    Payment(),
-    More(),
   ];
 
   @override
