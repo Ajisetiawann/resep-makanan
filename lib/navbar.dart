@@ -37,20 +37,6 @@ class _BottomNaviState extends State<BottomNavi> {
               ),
               label: 'Menu',
               activeIcon: Icon(Icons.restaurant_menu_outlined, color: Colors.blue)),
-          BottomNavigationBarItem(
-              icon: Icon(
-                Icons.list_alt_rounded,
-                color: Colors.grey,
-              ),
-              label: 'List',
-              activeIcon: Icon(Icons.list_alt_rounded, color: Colors.blue)),
-          BottomNavigationBarItem(
-              icon: Icon(
-                Icons.more_horiz_rounded,
-                color: Colors.grey,
-              ),
-              label: 'Akun',
-              activeIcon: Icon(Icons.more_horiz_rounded, color: Colors.blue)),
         ],
       ),
     );
