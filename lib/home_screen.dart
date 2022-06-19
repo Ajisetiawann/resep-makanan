@@ -47,8 +47,8 @@ class _HomeScreenState extends State<HomeScreen> {
                             mainAxisAlignment: MainAxisAlignment.center,
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: <Widget>[
-                              Text('Mau Masak Apa', style: TextStyle(color: Colors.black, fontSize: 23, fontWeight: FontWeight.bold)),
-                              Text('Hari Ini?', style: TextStyle(color: Colors.black, fontSize: 23, fontWeight: FontWeight.bold)),
+                              Text('Mau Masak Apa', style: TextStyle(color: Colors.white, fontSize: 23, fontWeight: FontWeight.bold)),
+                              Text('Hari Ini?', style: TextStyle(color: Colors.white, fontSize: 23, fontWeight: FontWeight.bold)),
                             ],
                           )
                         ],
