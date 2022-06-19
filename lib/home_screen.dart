@@ -26,7 +26,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 image: DecorationImage(
                     alignment: Alignment.topCenter,
                     image: AssetImage(
-                      'images/gambarhome.png',
+                      'images/group 2 (2).png',
                     ))),
           ),
           SafeArea(
