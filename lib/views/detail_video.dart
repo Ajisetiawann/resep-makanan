@@ -28,7 +28,10 @@ class _DetailVideoState extends State<DetailVideo> {
           ),
         ),
         body: Center(
-          child: Text(videoUrl),
+          child: Text(
+            videoUrl,
+            style: TextStyle(color: Colors.black),
+          ),
         ));
   }
 }
