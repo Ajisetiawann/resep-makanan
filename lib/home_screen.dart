@@ -22,7 +22,7 @@ class _HomeScreenState extends State<HomeScreen> {
         body: Stack(children: <Widget>[
           Container(
             height: size.height * .4,
-            decoration: BoxDecoration(image: DecorationImage(alignment: Alignment.topCenter, image: AssetImage('images/iPhone 13 mini - 1.png'))),
+            decoration: BoxDecoration(image: DecorationImage(alignment: Alignment.topCenter, image: AssetImage('images/Group 2.png'))),
           ),
           SafeArea(
             child: Padding(
