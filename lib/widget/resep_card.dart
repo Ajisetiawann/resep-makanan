@@ -43,7 +43,7 @@ class ResepCard extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Visibility(
-                  visible: videoUrl != 'no Video' ? true : false,
+                  visible: videoUrl != 'no video' ? true : false,
                   child: Container(
                     padding: EdgeInsets.all(5),
                     margin: EdgeInsets.all(10),
