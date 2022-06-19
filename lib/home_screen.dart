@@ -22,7 +22,7 @@ class _HomeScreenState extends State<HomeScreen> {
         body: Stack(children: <Widget>[
           Container(
             height: size.height * .4,
-            decoration: BoxDecoration(image: DecorationImage(alignment: Alignment.topCenter, image: AssetImage('images/Group 2.png'))),
+            decoration: BoxDecoration(image: DecorationImage(alignment: Alignment.topCenter, image: AssetImage('images/gambar.png'))),
           ),
           SafeArea(
             child: Padding(
