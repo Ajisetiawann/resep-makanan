@@ -48,7 +48,7 @@ class DetailResep extends StatelessWidget {
                   Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: Text(
-                      'Instruction',
+                      'Instructions',
                       style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold, fontSize: 18),
                       textAlign: TextAlign.left,
                     ),
