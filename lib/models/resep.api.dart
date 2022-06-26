@@ -6,7 +6,7 @@ class ResepApi {
   static Future<List<Resep>> getResep() async {
     var uri = Uri.https('tasty.p.rapidapi.com', 'recipes/list', {
       "from": "0",
-      "size": "30",
+      "size": "70",
       "tags": "under_30_minutes"
     });
 
