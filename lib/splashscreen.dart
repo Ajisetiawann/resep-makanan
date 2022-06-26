@@ -19,7 +19,7 @@ class _SplashScreenPageState extends State<SplashScreenPage> {
 
   openSplashScreen() async {
     //bisa diganti beberapa detik sesuai keinginan
-    var durasiSplash = const Duration(seconds: 2);
+    var durasiSplash = const Duration(seconds: 3);
     return Timer(durasiSplash, () {
       //pindah ke halaman home
       Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (_) {

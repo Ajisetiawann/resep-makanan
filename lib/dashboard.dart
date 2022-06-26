@@ -53,7 +53,7 @@ class _Dashboard extends State<Dashboard> {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => DetailResep(name: _resep[index].name, rating: _resep[index].rating.toString(), totalTime: _resep[index].totalTime, images: _resep[index].images, description: _resep[index].description, videoUrl: _resep[index].videoUrl),
+                            builder: (context) => DetailResep(name: _resep[index].name, rating: _resep[index].rating.toString(), totalTime: _resep[index].totalTime, images: _resep[index].images, description: _resep[index].description, videoUrl: _resep[index].videoUrl, instructions: _resep[index].instructions),
                           ))
                     },
                   );
