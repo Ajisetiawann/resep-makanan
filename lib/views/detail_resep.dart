@@ -10,8 +10,9 @@ class DetailResep extends StatelessWidget {
   final String description;
   final String videoUrl;
   final List<Instruction> instructions;
+  final List<Section> sections;
 
-  DetailResep({required this.name, required this.images, required this.rating, required this.totalTime, required this.description, required this.videoUrl, required this.instructions});
+  DetailResep({required this.name, required this.images, required this.rating, required this.totalTime, required this.description, required this.videoUrl, required this.instructions, required this.sections});
 
   @override
   Widget build(BuildContext context) {
@@ -63,7 +64,25 @@ class DetailResep extends StatelessWidget {
                               return ListTile(
                                 title: Text(instructions[index].displayText),
                               );
-                            }))
+                            })),
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Text(
+                        'Ingredients',
+                        style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold, fontSize: 18),
+                        textAlign: TextAlign.left,
+                      ),
+                    ),
+                    Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: ListView.builder(
+                            itemCount: sections.length,
+                            shrinkWrap: true,
+                            itemBuilder: (context, index) {
+                              return ListTile(
+                                title: Text(sections[index].components[index].rawText),
+                              );
+                            })),
                   ]))
             ],
           ),
