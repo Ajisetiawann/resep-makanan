@@ -16,6 +16,7 @@ class DetailResep extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    List<Component> components = List.from(sections[0].components);
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.redAccent[700],
@@ -76,11 +77,11 @@ class DetailResep extends StatelessWidget {
                     Padding(
                         padding: const EdgeInsets.all(8.0),
                         child: ListView.builder(
-                            itemCount: sections.length,
+                            itemCount: components.length,
                             shrinkWrap: true,
                             itemBuilder: (context, index) {
                               return ListTile(
-                                title: Text(sections[index].components[index].rawText),
+                                title: Text(components[index].rawText),
                               );
                             })),
                   ]))
