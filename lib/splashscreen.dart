@@ -34,9 +34,9 @@ class _SplashScreenPageState extends State<SplashScreenPage> {
       backgroundColor: Colors.white,
       body: Center(
         child: Image.asset(
-          "images/20220612_214425-removebg-preview.png",
+          "images/gambar3.jpg",
           width: 200,
-          height: 88,
+          height: 200,
         ),
       ),
     );

@@ -10,7 +10,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'TastyPedia',
+      title: 'MOmmy',
       theme: ThemeData(primarySwatch: Colors.blue, primaryColor: Colors.white, textTheme: TextTheme(bodyText2: TextStyle(color: Colors.white))),
       debugShowCheckedModeBanner: false,
       home: SplashScreenPage(),
