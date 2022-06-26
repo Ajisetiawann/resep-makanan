@@ -26,45 +26,47 @@ class DetailResep extends StatelessWidget {
         ),
       ),
       body: SafeArea(
-        child: Column(
-          mainAxisSize: MainAxisSize.max,
-          children: [
-            ResepCard(title: name, rating: rating, cookTime: totalTime, thumbnailUrl: images, videoUrl: videoUrl),
-            Container(
-                margin: EdgeInsets.symmetric(horizontal: 22, vertical: 10),
-                child: Column(mainAxisSize: MainAxisSize.max, crossAxisAlignment: CrossAxisAlignment.start, children: [
-                  Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: Text(
-                      'Description',
-                      style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold, fontSize: 18),
-                      textAlign: TextAlign.left,
-                    ),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: Text(description, style: TextStyle(color: Colors.black), textAlign: TextAlign.justify),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: Text(
-                      'Instructions',
-                      style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold, fontSize: 18),
-                      textAlign: TextAlign.left,
-                    ),
-                  ),
-                  Padding(
+        child: SingleChildScrollView(
+          child: Column(
+            mainAxisSize: MainAxisSize.max,
+            children: [
+              ResepCard(title: name, rating: rating, cookTime: totalTime, thumbnailUrl: images, videoUrl: videoUrl),
+              Container(
+                  margin: EdgeInsets.symmetric(horizontal: 22, vertical: 10),
+                  child: Column(mainAxisSize: MainAxisSize.max, crossAxisAlignment: CrossAxisAlignment.start, children: [
+                    Padding(
                       padding: const EdgeInsets.all(8.0),
-                      child: ListView.builder(
-                          itemCount: instructions.length,
-                          shrinkWrap: true,
-                          itemBuilder: (context, index) {
-                            return ListTile(
-                              title: Text(instructions[index].displayText),
-                            );
-                          }))
-                ]))
-          ],
+                      child: Text(
+                        'Description',
+                        style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold, fontSize: 18),
+                        textAlign: TextAlign.left,
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Text(description, style: TextStyle(color: Colors.black), textAlign: TextAlign.justify),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Text(
+                        'Instructions',
+                        style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold, fontSize: 18),
+                        textAlign: TextAlign.left,
+                      ),
+                    ),
+                    Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: ListView.builder(
+                            itemCount: instructions.length,
+                            shrinkWrap: true,
+                            itemBuilder: (context, index) {
+                              return ListTile(
+                                title: Text(instructions[index].displayText),
+                              );
+                            }))
+                  ]))
+            ],
+          ),
         ),
       ),
     );
