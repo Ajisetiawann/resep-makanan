@@ -29,9 +29,12 @@ class _Dashboard extends State<Dashboard> {
   }
 
   caridata() {
-    _resep.where((element) => element.name == 'Banana Cue').toList();
+    // _resep.where((element) => element.name == 'Banana Cue').toList();
+    var hasil = _resep.where((element) => element.name == 'Banana Cue').toList();
     setState(() {});
     print(_resep.length);
+    print(hasil.length);
+    return hasil;
   }
 
   @override
