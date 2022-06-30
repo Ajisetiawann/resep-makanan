@@ -22,7 +22,7 @@ class _HomeScreenState extends State<HomeScreen> {
     return AppBar(
       elevation: 0,
       leading: IconButton(
-        icon: SvgPicture.asset("assets/icons/menu.svg"),
+        icon: SvgPicture.asset("images/menu.svg"),
         onPressed: () {},
       ),
     );
