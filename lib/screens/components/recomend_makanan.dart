@@ -3,8 +3,8 @@ import 'package:resep_makanan/screens/components/body.dart';
 
 import '../../../constants.dart';
 
-class RecomendsPlants extends StatelessWidget {
-  const RecomendsPlants({
+class RecomendsMakanan extends StatelessWidget {
+  const RecomendsMakanan({
     key,
   }) : super(key: key);
 
@@ -15,7 +15,7 @@ class RecomendsPlants extends StatelessWidget {
       child: Row(
         children: <Widget>[
           RecomendPlantCard(
-            image: "assets/images/image_1.png",
+            image: "images/gambar1.png",
             title: "Samantha",
             country: "Russia",
             price: 440,
@@ -29,7 +29,7 @@ class RecomendsPlants extends StatelessWidget {
             },
           ),
           RecomendPlantCard(
-            image: "assets/images/image_2.png",
+            image: "images/gambar2.png",
             title: "Angelica",
             country: "Russia",
             price: 440,
@@ -43,7 +43,7 @@ class RecomendsPlants extends StatelessWidget {
             },
           ),
           RecomendPlantCard(
-            image: "assets/images/image_3.png",
+            image: "images/gambar3.png",
             title: "Samantha",
             country: "Russia",
             price: 440,
