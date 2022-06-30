@@ -43,7 +43,7 @@ class RecomendsMakanan extends StatelessWidget {
             },
           ),
           RecomendPlantCard(
-            image: "images/gambar3.png",
+            image: "images/image3.png",
             title: "Samantha",
             country: "Russia",
             price: 440,
