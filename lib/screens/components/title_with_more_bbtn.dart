@@ -24,7 +24,7 @@ class TitleWithMoreBtn extends StatelessWidget {
               borderRadius: BorderRadius.circular(20),
             ),
             color: kPrimaryColor,
-           onPressed:  ,
+            onPressed: () {},
             child: Text(
               "More",
               style: TextStyle(color: Colors.white),
@@ -72,4 +72,3 @@ class TitleWithCustomUnderline extends StatelessWidget {
     );
   }
 }
-
