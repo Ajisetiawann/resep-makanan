@@ -16,7 +16,7 @@ class RecomendsPlants extends StatelessWidget {
       child: Row(
         children: <Widget>[
           RecomendPlantCard(
-            image: "images/gambar5.jpg",
+            image: "images/image_2.png",
             title: "Rendang",
             country: "JAWA",
             price: 440,
@@ -57,18 +57,16 @@ class RecomendsPlants extends StatelessWidget {
 }
 
 class RecomendPlantCard extends StatelessWidget {
+  final String image, title, country;
+  final int price;
+  final Function press;
   const RecomendPlantCard({
-    Key? key,
     required this.image,
     required this.title,
     required this.country,
     required this.price,
     required this.press,
-  }) : super(key: key);
-
-  final String image, title, country;
-  final int price;
-  final Function press;
+  });
 
   @override
   Widget build(BuildContext context) {
