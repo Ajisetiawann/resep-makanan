@@ -36,11 +36,7 @@ class HeaderWithSearchBox extends StatelessWidget {
             child: Row(
               children: <Widget>[
                 Text(
-                  'Mau Masak apa?',
-                  style: Theme.of(context).textTheme.headline5!.copyWith(color: Colors.white, fontWeight: FontWeight.bold),
-                ),
-                Text(
-                  'hari ini?',
+                  'Mau Masak apa hari ini?',
                   style: Theme.of(context).textTheme.headline5!.copyWith(color: Colors.white, fontWeight: FontWeight.bold),
                 ),
                 Spacer(),
