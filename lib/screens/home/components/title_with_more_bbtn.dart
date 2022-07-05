@@ -57,7 +57,8 @@ class TitleWithCustomUnderline extends StatelessWidget {
             ),
           ),
           Positioned(
-            bottom: 10,
+            top: 10,
+            bottom: 0,
             left: 0,
             right: 0,
             child: Container(
