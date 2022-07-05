@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:resep_makanan/screens/details/components/details_screen.dart';
-import 'package:resep_makanan/screens/details/components/details_screen.dart';
+import 'package:resep_makanan/screens/details/components/detail_screen.dart';
+import 'package:resep_makanan/screens/details/components/detail_screen.dart';
 
 import '../../../constants.dart';
 
