@@ -16,8 +16,8 @@ class RecomendsPlants extends StatelessWidget {
       child: Row(
         children: <Widget>[
           RecomendPlantCard(
-            image: "images/image_2.png",
-            title: "Rendang",
+            image: "images/korean.jpg",
+            title: "Korean Corn Dogs",
             country: "JAWA",
             price: 440,
             press: () {
