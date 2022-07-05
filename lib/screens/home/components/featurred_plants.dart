@@ -28,13 +28,12 @@ class FeaturedPlants extends StatelessWidget {
 }
 
 class FeaturePlantCard extends StatelessWidget {
-  const FeaturePlantCard({
-    Key? key,
-    required this.image,
-    required this.press,
-  }) : super(key: key);
   final String image;
   final Function press;
+  const FeaturePlantCard({
+    required this.image,
+    required this.press,
+  });
 
   @override
   Widget build(BuildContext context) {
