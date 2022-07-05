@@ -3,13 +3,12 @@ import 'package:flutter/material.dart';
 import '../../../constants.dart';
 
 class TitleWithMoreBtn extends StatelessWidget {
-  const TitleWithMoreBtn({
-    Key? key,
-    required this.title,
-    required this.press,
-  }) : super(key: key);
   final String title;
   final Function press;
+  const TitleWithMoreBtn({
+    required this.title,
+    required this.press,
+  });
 
   @override
   Widget build(BuildContext context) {
