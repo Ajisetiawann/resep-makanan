@@ -29,16 +29,16 @@ class ImageAndIcons extends StatelessWidget {
                       alignment: Alignment.topLeft,
                       child: IconButton(
                         padding: EdgeInsets.symmetric(horizontal: kDefaultPadding),
-                        icon: SvgPicture.asset("assets/icons/back_arrow.svg"),
+                        icon: SvgPicture.asset("images/back_arrow.svg"),
                         onPressed: () {
                           Navigator.pop(context);
                         },
                       ),
                     ),
                     Spacer(),
-                    IconCard(icon: "assets/icons/sun.svg"),
-                    IconCard(icon: "assets/icons/icon_2.svg"),
-                    IconCard(icon: "assets/icons/icon_3.svg"),
+                    IconCard(icon: "images/sun.svg"),
+                    IconCard(icon: "images/icon_2.svg"),
+                    IconCard(icon: "images/icon_3.svg"),
                   ],
                 ),
               ),
@@ -61,7 +61,7 @@ class ImageAndIcons extends StatelessWidget {
                 image: DecorationImage(
                   alignment: Alignment.centerLeft,
                   fit: BoxFit.cover,
-                  image: AssetImage("assets/images/img.png"),
+                  image: AssetImage("images/img.png"),
                 ),
               ),
             ),
