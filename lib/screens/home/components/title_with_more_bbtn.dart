@@ -27,7 +27,7 @@ class TitleWithMoreBtn extends StatelessWidget {
             onPressed: press,
             child: Text(
               "More",
-              style: TextStyle(color: Colors.black),
+              style: TextStyle(color: Colors.white),
             ),
           ),
         ],
@@ -63,7 +63,7 @@ class TitleWithCustomUnderline extends StatelessWidget {
             child: Container(
               margin: EdgeInsets.only(right: kDefaultPadding / 4),
               height: 7,
-              color: kPrimaryColor.withOpacity(0.2),
+              color: kPrimaryColor,
             ),
           )
         ],
