@@ -5,7 +5,7 @@ import '../../../constants.dart';
 
 class HeaderWithSearchBox extends StatelessWidget {
   const HeaderWithSearchBox({
-    key,
+    Key? key,
     required this.size,
   }) : super(key: key);
 
@@ -36,11 +36,11 @@ class HeaderWithSearchBox extends StatelessWidget {
             child: Row(
               children: <Widget>[
                 Text(
-                  'Hi Uishopy!',
+                  'MOmmy',
                   style: Theme.of(context).textTheme.headline5!.copyWith(color: Colors.white, fontWeight: FontWeight.bold),
                 ),
                 Spacer(),
-                Image.asset("images/gambar1.png")
+                Image.asset("assets/images/logo.png")
               ],
             ),
           ),

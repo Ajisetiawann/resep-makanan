@@ -4,7 +4,7 @@ import '../../../constants.dart';
 
 class TitleWithMoreBtn extends StatelessWidget {
   const TitleWithMoreBtn({
-    key,
+    Key? key,
     required this.title,
     required this.press,
   }) : super(key: key);
@@ -38,7 +38,7 @@ class TitleWithMoreBtn extends StatelessWidget {
 
 class TitleWithCustomUnderline extends StatelessWidget {
   const TitleWithCustomUnderline({
-    key,
+    Key? key,
     required this.text,
   }) : super(key: key);
 

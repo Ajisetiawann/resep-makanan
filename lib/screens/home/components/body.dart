@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:resep_makanan/constants.dart';
 
-import 'featurred_makanan.dart';
-import 'recomend_makanan.dart';
+import 'featurred_plants.dart';
+import 'header_with_searchbox.dart';
+import 'recomend_plant.dart';
 import 'title_with_more_bbtn.dart';
 
 class Body extends StatelessWidget {
@@ -15,10 +16,11 @@ class Body extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
+          HeaderWithSearchBox(size: size),
           TitleWithMoreBtn(title: "Recomended", press: () {}),
-          RecomendsMakanan(),
-          TitleWithMoreBtn(title: "Featured Makanan", press: () {}),
-          FeaturedMakanan(),
+          RecomendsPlants(),
+          TitleWithMoreBtn(title: "Featured Plants", press: () {}),
+          FeaturedPlants(),
           SizedBox(height: kDefaultPadding),
         ],
       ),

@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:resep_makanan/screens/components/body.dart';
+import 'package:resep_makanan/screens/details/components/details_screen.dart';
+import 'package:resep_makanan/screens/details/components/details_screen.dart';
 
 import '../../../constants.dart';
 
-class RecomendsMakanan extends StatelessWidget {
-  const RecomendsMakanan({
-    key,
+class RecomendsPlants extends StatelessWidget {
+  const RecomendsPlants({
+    Key? key,
   }) : super(key: key);
 
   @override
@@ -15,21 +16,21 @@ class RecomendsMakanan extends StatelessWidget {
       child: Row(
         children: <Widget>[
           RecomendPlantCard(
-            image: "images/gambar1.png",
-            title: "Samantha",
-            country: "Russia",
+            image: "assets/images/gambar5.jpg",
+            title: "Rendang",
+            country: "JAWA",
             price: 440,
             press: () {
               Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: (context) => Body(),
+                  builder: (context) => DetailsScreen(),
                 ),
               );
             },
           ),
           RecomendPlantCard(
-            image: "images/gambar2.png",
+            image: "assets/images/image_2.png",
             title: "Angelica",
             country: "Russia",
             price: 440,
@@ -37,13 +38,13 @@ class RecomendsMakanan extends StatelessWidget {
               Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: (context) => Body(),
+                  builder: (context) => DetailsScreen(),
                 ),
               );
             },
           ),
           RecomendPlantCard(
-            image: "images/image3.png",
+            image: "assets/images/image_3.png",
             title: "Samantha",
             country: "Russia",
             price: 440,
@@ -57,7 +58,7 @@ class RecomendsMakanan extends StatelessWidget {
 
 class RecomendPlantCard extends StatelessWidget {
   const RecomendPlantCard({
-    key,
+    Key? key,
     required this.image,
     required this.title,
     required this.country,
@@ -83,6 +84,7 @@ class RecomendPlantCard extends StatelessWidget {
         children: <Widget>[
           Image.asset(image),
           GestureDetector(
+            onTap: () {},
             child: Container(
               padding: EdgeInsets.all(kDefaultPadding / 2),
               decoration: BoxDecoration(
@@ -115,10 +117,6 @@ class RecomendPlantCard extends StatelessWidget {
                     ),
                   ),
                   Spacer(),
-                  Text(
-                    '\$$price',
-                    style: Theme.of(context).textTheme.button?.copyWith(color: kPrimaryColor),
-                  )
                 ],
               ),
             ),
