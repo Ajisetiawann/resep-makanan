@@ -37,12 +37,11 @@ class TitleWithMoreBtn extends StatelessWidget {
 }
 
 class TitleWithCustomUnderline extends StatelessWidget {
+  final String text;
   const TitleWithCustomUnderline({
     Key? key,
     required this.text,
   }) : super(key: key);
-
-  final String text;
 
   @override
   Widget build(BuildContext context) {
