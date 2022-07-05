@@ -4,12 +4,11 @@ import 'package:flutter_svg/flutter_svg.dart';
 import '../../../constants.dart';
 
 class HeaderWithSearchBox extends StatelessWidget {
+  final Size size;
   const HeaderWithSearchBox({
     Key? key,
     required this.size,
   }) : super(key: key);
-
-  final Size size;
 
   @override
   Widget build(BuildContext context) {

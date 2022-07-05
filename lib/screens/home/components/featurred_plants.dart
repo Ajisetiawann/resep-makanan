@@ -29,7 +29,7 @@ class FeaturedPlants extends StatelessWidget {
 
 class FeaturePlantCard extends StatelessWidget {
   final String image;
-  final Function press;
+  final Function()? press;
   const FeaturePlantCard({
     required this.image,
     required this.press,
@@ -39,7 +39,7 @@ class FeaturePlantCard extends StatelessWidget {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return GestureDetector(
-      onTap: () {},
+      onTap: press,
       child: Container(
         margin: EdgeInsets.only(
           left: kDefaultPadding,
