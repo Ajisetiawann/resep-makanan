@@ -40,7 +40,7 @@ class HeaderWithSearchBox extends StatelessWidget {
                   style: Theme.of(context).textTheme.headline5!.copyWith(color: Colors.white, fontWeight: FontWeight.bold),
                 ),
                 Spacer(),
-                Image.asset("assets/images/logo.png")
+                Image.asset("images/logo.png")
               ],
             ),
           ),
@@ -82,7 +82,7 @@ class HeaderWithSearchBox extends StatelessWidget {
                       ),
                     ),
                   ),
-                  SvgPicture.asset("assets/icons/search.svg"),
+                  SvgPicture.asset("images/search.svg"),
                 ],
               ),
             ),
