@@ -3,8 +3,9 @@ import 'package:flutter/material.dart';
 import '../../../constants.dart';
 
 class FeaturedPlants extends StatelessWidget {
-  final String title;
-  const FeaturedPlants({Key? key, required this.title}) : super(key: key);
+  const FeaturedPlants({
+    Key? key,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
