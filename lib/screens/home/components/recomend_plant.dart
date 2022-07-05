@@ -59,7 +59,7 @@ class RecomendsPlants extends StatelessWidget {
 class RecomendPlantCard extends StatelessWidget {
   final String image, title, country;
   final int price;
-  final Function press;
+  final Function()? press;
 
   const RecomendPlantCard({
     required this.image,
@@ -83,7 +83,7 @@ class RecomendPlantCard extends StatelessWidget {
         children: <Widget>[
           Image.asset(image),
           GestureDetector(
-            onTap: () {},
+            onTap: press,
             child: Container(
               padding: EdgeInsets.all(kDefaultPadding / 2),
               decoration: BoxDecoration(
