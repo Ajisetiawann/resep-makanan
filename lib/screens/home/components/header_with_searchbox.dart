@@ -39,6 +39,10 @@ class HeaderWithSearchBox extends StatelessWidget {
                   'Mau Masak apa hari ini?',
                   style: Theme.of(context).textTheme.headline5!.copyWith(color: Colors.white, fontWeight: FontWeight.bold),
                 ),
+                Text(
+                  'hari ini?',
+                  style: Theme.of(context).textTheme.headline5!.copyWith(color: Colors.white, fontWeight: FontWeight.bold),
+                ),
                 Spacer(),
                 Image.asset("images/gambar2.png")
               ],
