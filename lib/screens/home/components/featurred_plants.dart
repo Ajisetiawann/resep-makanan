@@ -14,11 +14,11 @@ class FeaturedPlants extends StatelessWidget {
       child: Row(
         children: <Widget>[
           FeaturePlantCard(
-            image: "images/bottom_img_1.png",
+            image: "images/filipino.jpg",
             press: () {},
           ),
           FeaturePlantCard(
-            image: "images/bottom_img_2.png",
+            image: "images/mezcal.jpg",
             press: () {},
           ),
         ],
