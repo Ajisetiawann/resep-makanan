@@ -18,7 +18,7 @@ class RecomendsPlants extends StatelessWidget {
           RecomendPlantCard(
             image: "images/korean.jpg",
             title: "Korean Corn Dogs",
-            country: "JAWA",
+            country: "korea",
             price: 440,
             press: () {
               Navigator.push(
