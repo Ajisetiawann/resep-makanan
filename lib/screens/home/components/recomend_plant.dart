@@ -19,7 +19,6 @@ class RecomendsPlants extends StatelessWidget {
             image: "images/korean.jpg",
             title: "Korean Corn Dogs",
             country: "korea",
-            price: 440,
             press: () {
               Navigator.push(
                 context,
@@ -30,10 +29,9 @@ class RecomendsPlants extends StatelessWidget {
             },
           ),
           RecomendPlantCard(
-            image: "images/image_2.png",
-            title: "Angelica",
-            country: "Russia",
-            price: 440,
+            image: "images/waffle.jpg",
+            title: "Falafel Waffle",
+            country: "Mesir",
             press: () {
               Navigator.push(
                 context,
@@ -47,7 +45,6 @@ class RecomendsPlants extends StatelessWidget {
             image: "images/image_3.png",
             title: "Samantha",
             country: "Russia",
-            price: 440,
             press: () {},
           ),
         ],
@@ -58,14 +55,12 @@ class RecomendsPlants extends StatelessWidget {
 
 class RecomendPlantCard extends StatelessWidget {
   final String image, title, country;
-  final int price;
   final Function()? press;
 
   const RecomendPlantCard({
     required this.image,
     required this.title,
     required this.country,
-    required this.price,
     required this.press,
   });
 
