@@ -42,8 +42,8 @@ class RecomendsPlants extends StatelessWidget {
             },
           ),
           RecomendPlantCard(
-            image: "images/image_3.png",
-            title: "Samantha",
+            image: "images/pea.jpg",
+            title: "Pea Pesto Toast",
             country: "Russia",
             press: () {},
           ),
