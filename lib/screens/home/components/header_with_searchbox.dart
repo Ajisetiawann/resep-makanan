@@ -33,7 +33,7 @@ class HeaderWithSearchBox extends StatelessWidget {
             ),
             child: Row(
               children: <Widget>[
-                Image.asset('images/gambar2.png', height: 500),
+                Image.asset('images/gambar2.png', height: 1000),
               ],
             ),
           ),
