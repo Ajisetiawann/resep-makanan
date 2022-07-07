@@ -24,7 +24,7 @@ class TitleAndPrice extends StatelessWidget {
               children: [
                 TextSpan(
                   text: "$title\n",
-                  style: Theme.of(context).textTheme.headline4!.copyWith(color: kTextColor, fontSize: 10, fontWeight: FontWeight.bold),
+                  style: Theme.of(context).textTheme.headline4!.copyWith(color: kTextColor, fontSize: 20, fontWeight: FontWeight.bold),
                 ),
                 TextSpan(
                   text: country,
