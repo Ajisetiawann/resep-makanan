@@ -18,7 +18,7 @@ class FeaturedPlants extends StatelessWidget {
             press: () {},
           ),
           FeaturePlantCard(
-            image: "images/mezcal.jpg",
+            image: "images/dessert.jpg",
             press: () {},
           ),
         ],
