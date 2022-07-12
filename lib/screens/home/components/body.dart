@@ -1,29 +1,105 @@
 import 'package:flutter/material.dart';
-import 'package:resep_makanan/constants.dart';
+import 'package:flutter_icons/flutter_icons.dart';
+import 'package:resep_makanan/screens/home/components/recomend_plant.dart';
+import 'package:tab_indicator_styler/tab_indicator_styler.dart';
 
-import 'featurred_plants.dart';
-import 'header_with_searchbox.dart';
-import 'recomend_plant.dart';
-import 'title_with_more_bbtn.dart';
+class MyHomePage extends StatefulWidget {
+  @override
+  _MyHomePageState createState() => _MyHomePageState();
+}
 
-class Body extends StatelessWidget {
+class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
-    // It will provie us total height  and width of our screen
-    Size size = MediaQuery.of(context).size;
-    // it enable scrolling on small device
-    return SingleChildScrollView(
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: <Widget>[
-          HeaderWithSearchBox(size: size),
-          TitleWithMoreBtn(title: "Recomended", press: () {}),
-          RecomendsPlants(),
-          TitleWithMoreBtn(title: "Featured Resep", press: () {}),
-          FeaturedPlants(),
-          SizedBox(height: kDefaultPadding),
-        ],
+    return Scaffold(
+      bottomNavigationBar: Container(
+        // color: Colors.grey[300],
+        height: 100,
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: [
+            Icon(
+              FlutterIcons.home_outline_mco,
+              color: Colors.blue,
+            ),
+            Icon(
+              FlutterIcons.account_group_outline_mco,
+            ),
+            Icon(
+              FlutterIcons.heart_outlined_ent,
+            ),
+            Icon(
+              FlutterIcons.account_outline_mco,
+            ),
+          ],
+        ),
       ),
+      body: SafeArea(
+        bottom: false,
+        child: DefaultTabController(
+          length: 3,
+          initialIndex: 0,
+          child: Column(
+            children: [
+              SizedBox(
+                height: 40,
+              ),
+              TabBar(
+                isScrollable: true,
+                indicatorColor: Colors.red,
+                tabs: [
+                  Tab(
+                    text: "New Recipes".toUpperCase(),
+                  ),
+                  Tab(
+                    text: "Favourites".toUpperCase(),
+                  ),
+                  Tab(
+                    text: "Categories".toUpperCase(),
+                  ),
+                ],
+                labelColor: Colors.black,
+                indicator: DotIndicator(
+                  color: Colors.black,
+                  distanceFromCenter: 16,
+                  radius: 3,
+                  paintingStyle: PaintingStyle.fill,
+                ),
+                unselectedLabelColor: Colors.black.withOpacity(0.3),
+                labelStyle: TextStyle(
+                  fontSize: 12,
+                  fontWeight: FontWeight.w600,
+                ),
+                labelPadding: EdgeInsets.symmetric(
+                  horizontal: 24,
+                ),
+              ),
+              Expanded(
+                child: TabBarView(
+                  children: <Widget>[
+                    RecomendsPlants(),
+                    Container(
+                      child: Center(
+                        child: Text(
+                          'Favourite Section',
+                        ),
+                      ),
+                    ),
+                    Container(
+                      child: Center(
+                        child: Text(
+                          'Cetegories',
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              )
+            ],
+          ),
+        ),
+      ),
+      // This trailing comma makes auto-formatting nicer for build methods.
     );
   }
 }
