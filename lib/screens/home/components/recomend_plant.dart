@@ -4,7 +4,7 @@ import 'package:resep_makanan/screens/details/components/detail_screen.dart';
 import 'package:resep_makanan/screens/details/components/resepdetail.dart';
 import 'package:flutter_icons/flutter_icons.dart';
 import 'package:resep_makanan/screens/details/components/resepdetail.dart';
-import 'package:resep_makanan/models/Resepmode.dart';
+import 'package:resep_makanan/models/resepmode.dart';
 
 import '../../../constants.dart';
 
