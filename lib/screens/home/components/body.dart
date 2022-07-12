@@ -18,7 +18,7 @@ class Body extends StatelessWidget {
         children: <Widget>[
           HeaderWithSearchBox(size: size),
           TitleWithMoreBtn(title: "Recomended", press: () {}),
-          NewRecipe(),
+          RecomendsPlants(),
           TitleWithMoreBtn(title: "Featured Resep", press: () {}),
           FeaturedPlants(),
           SizedBox(height: kDefaultPadding),
