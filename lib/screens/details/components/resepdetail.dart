@@ -65,7 +65,7 @@ class RecipeDetails extends StatelessWidget {
                     width: 5,
                   ),
                   Text(
-                    "198",
+                    "198", style: TextStyle(color: Colors.black),
                     // style: _textTheme.caption,
                   ),
                   SizedBox(
