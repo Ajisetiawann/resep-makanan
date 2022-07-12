@@ -12,6 +12,17 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Colors.redAccent[700],
+        title: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Icon(Icons.restaurant_menu),
+            SizedBox(width: 10),
+            Text('Menu'),
+          ],
+        ),
+      ),
       body: SafeArea(
         bottom: false,
         child: DefaultTabController(

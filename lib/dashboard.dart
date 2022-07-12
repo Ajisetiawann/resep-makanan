@@ -40,9 +40,6 @@ class _Dashboard extends State<Dashboard> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        floatingActionButton: FloatingActionButton(onPressed: () {
-          caridata();
-        }),
         appBar: AppBar(
           backgroundColor: Colors.redAccent[700],
           title: Row(
