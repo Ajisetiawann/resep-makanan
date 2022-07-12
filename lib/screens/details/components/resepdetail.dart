@@ -52,10 +52,6 @@ class RecipeDetails extends StatelessWidget {
               SizedBox(
                 height: 10,
               ),
-              Text(
-                recipeModel.writer,
-                style: _textTheme.caption,
-              ),
               SizedBox(
                 height: 10,
               ),

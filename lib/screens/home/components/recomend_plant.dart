@@ -123,10 +123,6 @@ class _RecipeCardState extends State<RecipeCard> {
                     SizedBox(
                       height: 8,
                     ),
-                    Text(
-                      widget.recipeModel.writer,
-                      style: Theme.of(context).textTheme.caption,
-                    ),
                   ],
                 ),
               ),
