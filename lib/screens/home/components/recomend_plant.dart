@@ -143,6 +143,7 @@ class _RecipeCardState extends State<RecipeCard> {
                     ),
                     Text(
                       widget.recipeModel.cookingTime.toString() + '\'',
+                      style: TextStyle(color: Colors.black),
                     ),
                     Spacer(),
                     InkWell(
