@@ -23,6 +23,9 @@ dependencies:
   flutter_svg: ^1.0.3 
   http: ^0.13.1
   video_player: ^2.1.12
+  flutter_icons: ^1.1.0
+  sliding_up_panel: ^1.0.2
+  tab_indicator_styler: ^1.0.0
   
 
 dev_dependencies:
