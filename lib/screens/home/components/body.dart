@@ -40,13 +40,13 @@ class _MyHomePageState extends State<MyHomePage> {
                 indicatorColor: Colors.red,
                 tabs: [
                   Tab(
-                    text: "New Recipes".toUpperCase(),
+                    text: "New Resep".toUpperCase(),
                   ),
                   Tab(
-                    text: "Favourites".toUpperCase(),
+                    text: "Favorit".toUpperCase(),
                   ),
                   Tab(
-                    text: "Categories".toUpperCase(),
+                    text: "Kategori".toUpperCase(),
                   ),
                 ],
                 labelColor: Colors.black,
