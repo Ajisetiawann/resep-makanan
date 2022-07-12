@@ -18,8 +18,8 @@ class _MyHomePageState extends State<MyHomePage> {
           children: [
             Image.asset(
               "images/gambar2.png",
-              width: 200,
-              height: 200,
+              width: 100,
+              height: 100,
             ),
             SizedBox(width: 10),
           ],
