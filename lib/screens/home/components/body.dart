@@ -16,7 +16,11 @@ class _MyHomePageState extends State<MyHomePage> {
         backgroundColor: Colors.redAccent[700],
         title: Row(
           children: [
-            Image.asset("images/gambar2.png"),
+            Image.asset(
+              "images/gambar2.png",
+              width: 10,
+              height: 10,
+            ),
             SizedBox(width: 10),
           ],
         ),
