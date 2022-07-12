@@ -15,11 +15,9 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: AppBar(
         backgroundColor: Colors.redAccent[700],
         title: Row(
-          mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Icon(Icons.restaurant_menu),
+            Image.asset("images/gambar2.png"),
             SizedBox(width: 10),
-            Text('Menu'),
           ],
         ),
       ),
