@@ -1,122 +1,172 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_icons/flutter_icons.dart';
+import 'package:resep_makanan/models/resepmode.dart';
 import 'package:resep_makanan/screens/details/components/detail_screen.dart';
 import 'package:resep_makanan/screens/details/components/detail_screen.dart';
 
 import '../../../constants.dart';
+import '../../details/components/resepdetail.dart';
 
 class RecomendsPlants extends StatelessWidget {
-  const RecomendsPlants({
-    Key? key,
-  }) : super(key: key);
-
   @override
   Widget build(BuildContext context) {
-    return SingleChildScrollView(
-      scrollDirection: Axis.horizontal,
-      child: Row(
-        children: <Widget>[
-          RecomendPlantCard(
-            image: "images/korean.jpg",
-            title: "Korean Corn Dogs",
-            country: "korea",
-            press: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => DetailsScreen(),
-                ),
-              );
-            },
-          ),
-          RecomendPlantCard(
-            image: "images/waffle.jpg",
-            title: "Falafel Waffle",
-            country: "Mesir",
-            press: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => DetailsScreen(),
-                ),
-              );
-            },
-          ),
-          RecomendPlantCard(
-            image: "images/pea.jpg",
-            title: "Pea Pesto Toast",
-            country: "Russia",
-            press: () {},
-          ),
-        ],
+    return Scaffold(
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            SizedBox(
+              height: 20,
+            ),
+            ListView.builder(
+              physics: ScrollPhysics(),
+              shrinkWrap: true,
+              itemCount: RecipeModel.demoRecipe.length,
+              itemBuilder: (BuildContext context, int index) {
+                return Padding(
+                  padding: const EdgeInsets.symmetric(
+                    horizontal: 12,
+                    vertical: 12,
+                  ),
+                  child: InkWell(
+                    onTap: () => Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => RecipeDetails(
+                            recipeModel: RecipeModel.demoRecipe[index],
+                          ),
+                        )),
+                    child: RecipeCard(
+                      recipeModel: RecipeModel.demoRecipe[index],
+                    ),
+                  ),
+                );
+              },
+            )
+          ],
+        ),
       ),
     );
   }
 }
 
-class RecomendPlantCard extends StatelessWidget {
-  final String image, title, country;
-  final Function()? press;
+class RecipeCard extends StatefulWidget {
+  final RecipeModel recipeModel;
 
-  const RecomendPlantCard({
-    required this.image,
-    required this.title,
-    required this.country,
-    required this.press,
+  RecipeCard({
+    required this.recipeModel,
   });
 
   @override
+  _RecipeCardState createState() => _RecipeCardState();
+}
+
+class _RecipeCardState extends State<RecipeCard> {
+  bool loved = false;
+  bool saved = false;
+  @override
   Widget build(BuildContext context) {
-    Size size = MediaQuery.of(context).size;
-    return Container(
-      margin: EdgeInsets.only(
-        left: kDefaultPadding,
-        top: kDefaultPadding / 2,
-        bottom: kDefaultPadding * 2.5,
-      ),
-      width: size.width * 0.5,
-      child: Column(
-        children: <Widget>[
-          Image.asset(image),
-          GestureDetector(
-            onTap: press,
-            child: Container(
-              padding: EdgeInsets.all(kDefaultPadding / 2),
-              decoration: BoxDecoration(
-                color: Colors.white,
-                borderRadius: BorderRadius.only(
-                  bottomLeft: Radius.circular(10),
-                  bottomRight: Radius.circular(10),
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Stack(
+          children: [
+            Align(
+              alignment: Alignment.topCenter,
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(24),
+                child: Hero(
+                  tag: widget.recipeModel.imgPath,
+                  child: Image(
+                    height: 320,
+                    width: 320,
+                    fit: BoxFit.cover,
+                    image: AssetImage(widget.recipeModel.imgPath),
+                  ),
                 ),
-                boxShadow: [
-                  BoxShadow(
-                    offset: Offset(0, 10),
-                    blurRadius: 50,
-                    color: kPrimaryColor.withOpacity(0.23),
-                  ),
-                ],
-              ),
-              child: Row(
-                children: <Widget>[
-                  RichText(
-                    text: TextSpan(
-                      children: [
-                        TextSpan(text: "$title\n".toUpperCase(), style: Theme.of(context).textTheme.button),
-                        TextSpan(
-                          text: "$country".toUpperCase(),
-                          style: TextStyle(
-                            color: kPrimaryColor.withOpacity(0.5),
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                  Spacer(),
-                ],
               ),
             ),
-          )
-        ],
-      ),
+            Positioned(
+              top: 20,
+              right: 40,
+              child: InkWell(
+                onTap: () {
+                  setState(() {
+                    saved = !saved;
+                  });
+                },
+                child: Icon(
+                  saved ? FlutterIcons.bookmark_check_mco : FlutterIcons.bookmark_outline_mco,
+                  color: Colors.white,
+                  size: 38,
+                ),
+              ),
+            ),
+          ],
+        ),
+        SizedBox(
+          height: 20,
+        ),
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 24.0),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Flexible(
+                flex: 2,
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      widget.recipeModel.title,
+                      style: Theme.of(context).textTheme.subtitle1,
+                    ),
+                    SizedBox(
+                      height: 8,
+                    ),
+                    Text(
+                      widget.recipeModel.writer,
+                      style: Theme.of(context).textTheme.caption,
+                    ),
+                  ],
+                ),
+              ),
+              // Spacer(),
+              Flexible(
+                flex: 1,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  children: [
+                    SizedBox(
+                      width: 20,
+                    ),
+                    Icon(
+                      FlutterIcons.timer_mco,
+                    ),
+                    SizedBox(
+                      width: 4,
+                    ),
+                    Text(
+                      widget.recipeModel.cookingTime.toString() + '\'',
+                    ),
+                    Spacer(),
+                    InkWell(
+                      onTap: () {
+                        setState(() {
+                          loved = !loved;
+                        });
+                      },
+                      child: Icon(
+                        FlutterIcons.heart_circle_mco,
+                        color: loved ? Colors.red : Colors.black,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ],
+          ),
+        ),
+      ],
     );
   }
 }
