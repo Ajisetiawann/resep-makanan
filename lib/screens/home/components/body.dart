@@ -12,28 +12,6 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      bottomNavigationBar: Container(
-        // color: Colors.grey[300],
-        height: 100,
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          children: [
-            Icon(
-              FlutterIcons.home_outline_mco,
-              color: Colors.blue,
-            ),
-            Icon(
-              FlutterIcons.account_group_outline_mco,
-            ),
-            Icon(
-              FlutterIcons.heart_outlined_ent,
-            ),
-            Icon(
-              FlutterIcons.account_outline_mco,
-            ),
-          ],
-        ),
-      ),
       body: SafeArea(
         bottom: false,
         child: DefaultTabController(
