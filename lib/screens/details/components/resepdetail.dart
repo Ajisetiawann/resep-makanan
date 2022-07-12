@@ -79,6 +79,7 @@ class RecipeDetails extends StatelessWidget {
                   ),
                   Text(
                     recipeModel.cookingTime.toString() + '\'',
+                    style: TextStyle(color: Colors.black),
                   ),
                   SizedBox(
                     width: 20,
@@ -93,6 +94,7 @@ class RecipeDetails extends StatelessWidget {
                   ),
                   Text(
                     recipeModel.servings.toString() + ' Servings',
+                    style: TextStyle(color: Colors.black),
                   ),
                 ],
               ),
