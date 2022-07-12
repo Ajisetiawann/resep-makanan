@@ -1,3 +1,4 @@
+// @dart=2.9
 import 'package:resep_makanan/home_screen.dart';
 import 'package:resep_makanan/navbar.dart';
 import 'package:flutter/material.dart';
