@@ -19,7 +19,7 @@ class Kategori extends StatelessWidget {
             style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
           ),
           Spacer(),
-          Image.asset("assets/images/logo.png")
+          Image.asset("/images/gambar2.png")
         ],
       ),
     );
