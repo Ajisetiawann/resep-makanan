@@ -119,4 +119,47 @@ class KategoriCard extends StatelessWidget {
       ),
     );
   }
+
+  @override
+  Widget buildd(BuildContext context) {
+    return SingleChildScrollView(
+      scrollDirection: Axis.horizontal,
+      child: Row(
+        children: <Widget>[
+          KategoriCard(
+            image: "images/korean.jpg",
+            title: "Rendang",
+            country: "JAWA",
+            press: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => DetailKategori(),
+                ),
+              );
+            },
+          ),
+          KategoriCard(
+            image: "images/waffle.jpg",
+            title: "Angelica",
+            country: "Russia",
+            press: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => DetailKategori(),
+                ),
+              );
+            },
+          ),
+          KategoriCard(
+            image: "images/korean.jpg",
+            title: "Samantha",
+            country: "Russia",
+            press: () {},
+          ),
+        ],
+      ),
+    );
+  }
 }
