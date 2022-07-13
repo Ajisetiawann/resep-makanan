@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_icons/flutter_icons.dart';
-import 'package:resep_makanan/screens/home/components/recomend_plant.dart';
+import 'package:resep_makanan/screens/home/components/newresep.dart';
+import 'package:resep_makanan/screens/home/components/kategori.dart';
 import 'package:tab_indicator_styler/tab_indicator_styler.dart';
 
 class MyHomePage extends StatefulWidget {
@@ -68,14 +69,8 @@ class _MyHomePageState extends State<MyHomePage> {
               Expanded(
                 child: TabBarView(
                   children: <Widget>[
-                    RecomendsPlants(),
-                    Container(
-                      child: Center(
-                        child: Text(
-                          'Favourite Section',
-                        ),
-                      ),
-                    ),
+                    NewResep(),
+                    Kategori(),
                     Container(
                       child: Center(
                         child: Text(

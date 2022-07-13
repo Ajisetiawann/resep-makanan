@@ -7,7 +7,7 @@ import 'package:resep_makanan/screens/details/components/detail_screen.dart';
 import '../../../constants.dart';
 import '../../details/components/resepdetail.dart';
 
-class RecomendsPlants extends StatelessWidget {
+class NewResep extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
