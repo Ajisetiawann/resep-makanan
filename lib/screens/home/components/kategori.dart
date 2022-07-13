@@ -1,169 +1,127 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_icons/flutter_icons.dart';
-import 'package:resep_makanan/models/resepmode.dart';
-import 'package:resep_makanan/screens/details/components/detail_screen.dart';
-import 'package:resep_makanan/screens/details/components/detail_screen.dart';
+import 'package:resep_makanan/screens/details/components/detail_kategori.dart';
 
 import '../../../constants.dart';
-import '../../details/components/resepdetail.dart';
 
 class Kategori extends StatelessWidget {
+  const Kategori({
+    Key? key,
+  }) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: SingleChildScrollView(
-        child: Column(
-          children: [
-            SizedBox(
-              height: 20,
-            ),
-            ListView.builder(
-              physics: ScrollPhysics(),
-              shrinkWrap: true,
-              itemCount: RecipeModel.demoRecipe.length,
-              itemBuilder: (BuildContext context, int index) {
-                return Padding(
-                  padding: const EdgeInsets.symmetric(
-                    horizontal: 12,
-                    vertical: 12,
-                  ),
-                  child: InkWell(
-                    onTap: () => Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => RecipeDetails(
-                            recipeModel: RecipeModel.demoRecipe[index],
-                          ),
-                        )),
-                    child: RecipeCard(
-                      recipeModel: RecipeModel.demoRecipe[index],
-                    ),
-                  ),
-                );
-              },
-            )
-          ],
-        ),
+    return SingleChildScrollView(
+      scrollDirection: Axis.horizontal,
+      child: Row(
+        children: <Widget>[
+          RecomendPlantCard(
+            image: "assets/images/gambar5.jpg",
+            title: "Rendang",
+            country: "JAWA",
+            price: 440,
+            press: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => DetailKategori(),
+                ),
+              );
+            },
+          ),
+          RecomendPlantCard(
+            image: "assets/images/image_2.png",
+            title: "Angelica",
+            country: "Russia",
+            price: 440,
+            press: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => DetailKategori(),
+                ),
+              );
+            },
+          ),
+          RecomendPlantCard(
+            image: "assets/images/image_3.png",
+            title: "Samantha",
+            country: "Russia",
+            price: 440,
+            press: () {},
+          ),
+        ],
       ),
     );
   }
 }
 
-class RecipeCard extends StatefulWidget {
-  final RecipeModel recipeModel;
+class RecomendPlantCard extends StatelessWidget {
+  const RecomendPlantCard({
+    key,
+    required this.image,
+    required this.title,
+    required this.country,
+    required this.price,
+    required this.press,
+  }) : super(key: key);
 
-  RecipeCard({
-    required this.recipeModel,
-  });
+  final String image, title, country;
+  final int price;
+  final Function()? press;
 
-  @override
-  _RecipeCardState createState() => _RecipeCardState();
-}
-
-class _RecipeCardState extends State<RecipeCard> {
-  bool loved = false;
-  bool saved = false;
   @override
   Widget build(BuildContext context) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        Stack(
-          children: [
-            Align(
-              alignment: Alignment.topCenter,
-              child: ClipRRect(
-                borderRadius: BorderRadius.circular(24),
-                child: Hero(
-                  tag: widget.recipeModel.imgPath,
-                  child: Image(
-                    height: 320,
-                    width: 320,
-                    fit: BoxFit.cover,
-                    image: AssetImage(widget.recipeModel.imgPath),
+    Size size = MediaQuery.of(context).size;
+    return Container(
+      margin: EdgeInsets.only(
+        left: kDefaultPadding,
+        top: kDefaultPadding / 2,
+        bottom: kDefaultPadding * 2.5,
+      ),
+      width: size.width * 0.4,
+      child: Column(
+        children: <Widget>[
+          Image.asset(image),
+          GestureDetector(
+            onTap: press,
+            child: Container(
+              padding: EdgeInsets.all(kDefaultPadding / 2),
+              decoration: BoxDecoration(
+                color: Colors.white,
+                borderRadius: BorderRadius.only(
+                  bottomLeft: Radius.circular(10),
+                  bottomRight: Radius.circular(10),
+                ),
+                boxShadow: [
+                  BoxShadow(
+                    offset: Offset(0, 10),
+                    blurRadius: 50,
+                    color: kPrimaryColor.withOpacity(0.23),
                   ),
-                ),
+                ],
+              ),
+              child: Row(
+                children: <Widget>[
+                  RichText(
+                    text: TextSpan(
+                      children: [
+                        TextSpan(text: "$title\n".toUpperCase(), style: Theme.of(context).textTheme.button),
+                        TextSpan(
+                          text: "$country".toUpperCase(),
+                          style: TextStyle(
+                            color: kPrimaryColor.withOpacity(0.5),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                  Spacer(),
+                ],
               ),
             ),
-            Positioned(
-              top: 20,
-              right: 40,
-              child: InkWell(
-                onTap: () {
-                  setState(() {
-                    saved = !saved;
-                  });
-                },
-                child: Icon(
-                  saved ? FlutterIcons.bookmark_check_mco : FlutterIcons.bookmark_outline_mco,
-                  color: Colors.white,
-                  size: 38,
-                ),
-              ),
-            ),
-          ],
-        ),
-        SizedBox(
-          height: 20,
-        ),
-        Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 24.0),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Flexible(
-                flex: 2,
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(
-                      widget.recipeModel.title,
-                      style: Theme.of(context).textTheme.subtitle1,
-                    ),
-                    SizedBox(
-                      height: 8,
-                    ),
-                  ],
-                ),
-              ),
-              // Spacer(),
-              Flexible(
-                flex: 1,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.end,
-                  children: [
-                    SizedBox(
-                      width: 20,
-                    ),
-                    Icon(
-                      FlutterIcons.timer_mco,
-                    ),
-                    SizedBox(
-                      width: 4,
-                    ),
-                    Text(
-                      widget.recipeModel.cookingTime.toString() + '\'',
-                      style: TextStyle(color: Colors.black),
-                    ),
-                    Spacer(),
-                    InkWell(
-                      onTap: () {
-                        setState(() {
-                          loved = !loved;
-                        });
-                      },
-                      child: Icon(
-                        FlutterIcons.heart_circle_mco,
-                        color: loved ? Colors.red : Colors.black,
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-            ],
-          ),
-        ),
-      ],
+          )
+        ],
+      ),
     );
   }
 }
