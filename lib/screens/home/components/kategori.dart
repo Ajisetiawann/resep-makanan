@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:resep_makanan/screens/details/components/detail_kategori.dart';
-import 'package:resep_makanan/screens/home/components/header_with_searchbox.dart';
-import 'package:resep_makanan/screens/home/components/title_with_more_bbtn.dart';
 
 import '../../../constants.dart';
 
@@ -16,7 +14,6 @@ class Kategori extends StatelessWidget {
       scrollDirection: Axis.horizontal,
       child: Row(
         children: <Widget>[
-          TitleWithMoreBtn(title: "Recomended", press: () {}),
           KategoriCard(
             image: "images/korean.jpg",
             title: "Rendang",
