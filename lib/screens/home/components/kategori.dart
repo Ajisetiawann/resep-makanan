@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:resep_makanan/screens/details/components/detail_kategori.dart';
+import 'package:resep_makanan/screens/home/components/header_with_searchbox.dart';
+import 'package:resep_makanan/screens/home/components/title_with_more_bbtn.dart';
 
 import '../../../constants.dart';
 
@@ -14,11 +16,11 @@ class Kategori extends StatelessWidget {
       scrollDirection: Axis.horizontal,
       child: Row(
         children: <Widget>[
+          TitleWithMoreBtn(title: "Recomended", press: () {}),
           KategoriCard(
             image: "images/korean.jpg",
             title: "Rendang",
             country: "JAWA",
-            price: 440,
             press: () {
               Navigator.push(
                 context,
@@ -32,7 +34,6 @@ class Kategori extends StatelessWidget {
             image: "images/waffle.jpg",
             title: "Angelica",
             country: "Russia",
-            price: 440,
             press: () {
               Navigator.push(
                 context,
@@ -46,7 +47,6 @@ class Kategori extends StatelessWidget {
             image: "images/korean.jpg",
             title: "Samantha",
             country: "Russia",
-            price: 440,
             press: () {},
           ),
         ],
@@ -61,12 +61,10 @@ class KategoriCard extends StatelessWidget {
     required this.image,
     required this.title,
     required this.country,
-    required this.price,
     required this.press,
   }) : super(key: key);
 
   final String image, title, country;
-  final int price;
   final Function()? press;
 
   @override
