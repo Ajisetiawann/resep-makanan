@@ -16,9 +16,8 @@ class Kategori extends StatelessWidget {
         children: <Widget>[
           Text(
             'Recomended',
-            style: Theme.of(context).textTheme.headline5!.copyWith(color: Colors.black, fontWeight: FontWeight.bold, fontSize: 10),
+            style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold, fontSize: 10),
           ),
-          Spacer(),
           KategoriCard(
             image: "images/korean.jpg",
             title: "Rendang",
