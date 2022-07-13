@@ -44,10 +44,10 @@ class _MyHomePageState extends State<MyHomePage> {
                     text: "New Resep".toUpperCase(),
                   ),
                   Tab(
-                    text: "Favorit".toUpperCase(),
+                    text: "Kategori".toUpperCase(),
                   ),
                   Tab(
-                    text: "Kategori".toUpperCase(),
+                    text: "Favorit".toUpperCase(),
                   ),
                 ],
                 labelColor: Colors.black,

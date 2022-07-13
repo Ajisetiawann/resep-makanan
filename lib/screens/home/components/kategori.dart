@@ -14,8 +14,8 @@ class Kategori extends StatelessWidget {
       scrollDirection: Axis.horizontal,
       child: Row(
         children: <Widget>[
-          RecomendPlantCard(
-            image: "assets/images/gambar5.jpg",
+          KategoriCard(
+            image: "images/korean.jpg",
             title: "Rendang",
             country: "JAWA",
             price: 440,
@@ -28,8 +28,8 @@ class Kategori extends StatelessWidget {
               );
             },
           ),
-          RecomendPlantCard(
-            image: "assets/images/image_2.png",
+          KategoriCard(
+            image: "images/waffle.jpg",
             title: "Angelica",
             country: "Russia",
             price: 440,
@@ -42,8 +42,8 @@ class Kategori extends StatelessWidget {
               );
             },
           ),
-          RecomendPlantCard(
-            image: "assets/images/image_3.png",
+          KategoriCard(
+            image: "images/korean.jpg",
             title: "Samantha",
             country: "Russia",
             price: 440,
@@ -55,8 +55,8 @@ class Kategori extends StatelessWidget {
   }
 }
 
-class RecomendPlantCard extends StatelessWidget {
-  const RecomendPlantCard({
+class KategoriCard extends StatelessWidget {
+  const KategoriCard({
     key,
     required this.image,
     required this.title,
