@@ -14,41 +14,72 @@ class Kategori extends StatelessWidget {
       scrollDirection: Axis.horizontal,
       child: Row(
         children: <Widget>[
-          KategoriCard(
-            image: "images/korean.jpg",
-            title: "Rendang",
-            country: "JAWA",
-            press: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => DetailKategori(),
-                ),
-              );
-            },
+          Text(
+            'Hi Uishopy!',
+            style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
           ),
-          KategoriCard(
-            image: "images/waffle.jpg",
-            title: "Angelica",
-            country: "Russia",
-            press: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => DetailKategori(),
-                ),
-              );
-            },
-          ),
-          KategoriCard(
-            image: "images/korean.jpg",
-            title: "Samantha",
-            country: "Russia",
-            press: () {},
-          ),
+          Spacer(),
+          Image.asset("assets/images/logo.png")
         ],
       ),
     );
+    Positioned(
+        bottom: 0,
+        left: 0,
+        right: 0,
+        child: Container(
+          alignment: Alignment.center,
+          margin: EdgeInsets.symmetric(horizontal: kDefaultPadding),
+          padding: EdgeInsets.symmetric(horizontal: kDefaultPadding),
+          height: 54,
+          decoration: BoxDecoration(
+            color: Colors.white,
+            borderRadius: BorderRadius.circular(20),
+            boxShadow: [
+              BoxShadow(
+                offset: Offset(0, 10),
+                blurRadius: 50,
+                color: kPrimaryColor.withOpacity(0.23),
+              ),
+            ],
+          ),
+          child: Row(
+            children: <Widget>[
+              KategoriCard(
+                image: "images/korean.jpg",
+                title: "Rendang",
+                country: "JAWA",
+                press: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => DetailKategori(),
+                    ),
+                  );
+                },
+              ),
+              KategoriCard(
+                image: "images/waffle.jpg",
+                title: "Angelica",
+                country: "Russia",
+                press: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => DetailKategori(),
+                    ),
+                  );
+                },
+              ),
+              KategoriCard(
+                image: "images/korean.jpg",
+                title: "Samantha",
+                country: "Russia",
+                press: () {},
+              ),
+            ],
+          ),
+        ));
   }
 }
 
