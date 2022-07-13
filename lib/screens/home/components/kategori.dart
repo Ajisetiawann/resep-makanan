@@ -14,10 +14,6 @@ class Kategori extends StatelessWidget {
       scrollDirection: Axis.horizontal,
       child: Row(
         children: <Widget>[
-          Text(
-            'Recomended',
-            style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold, fontSize: 10),
-          ),
           KategoriCard(
             image: "images/korean.jpg",
             title: "Rendang",
