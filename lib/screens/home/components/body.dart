@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_icons/flutter_icons.dart';
+import 'package:resep_makanan/screens/home/components/favorite.dart';
 import 'package:resep_makanan/screens/home/components/newresep.dart';
 import 'package:resep_makanan/screens/home/components/kategori.dart';
 import 'package:tab_indicator_styler/tab_indicator_styler.dart';
@@ -70,14 +71,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 child: TabBarView(
                   children: <Widget>[
                     NewResep(),
-                    Kategori(),
-                    Container(
-                      child: Center(
-                        child: Text(
-                          'Cetegories',
-                        ),
-                      ),
-                    ),
+                    Favorite(),
                   ],
                 ),
               )
