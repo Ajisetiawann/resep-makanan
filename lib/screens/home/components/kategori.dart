@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:resep_makanan/screens/details/components/detail_kategori.dart';
+import 'package:resep_makanan/screens/details/components/detail_screen.dart';
 
 import '../../../constants.dart';
 
@@ -22,7 +23,7 @@ class Kategori extends StatelessWidget {
               Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: (context) => DetailKategori(),
+                  builder: (context) => DetailsScreen(),
                 ),
               );
             },
@@ -35,7 +36,7 @@ class Kategori extends StatelessWidget {
               Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: (context) => DetailKategori(),
+                  builder: (context) => DetailsScreen(),
                 ),
               );
             },
