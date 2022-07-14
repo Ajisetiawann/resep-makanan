@@ -13,7 +13,7 @@ class KategoriMenu extends StatelessWidget {
         title: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Icon(Icons.restaurant_menu),
+            Icon(Icons.category),
             SizedBox(width: 10),
             Text('Kategori'),
           ],

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:resep_makanan/constants.dart';
 
-import 'featurred_plants.dart';
+import 'Minuman.dart';
 import 'header_with_searchbox.dart';
 import 'kategori.dart';
 import 'title_with_more_bbtn.dart';
@@ -16,10 +16,10 @@ class MenuKategori extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
-          TitleWithMoreBtn(title: "Recomended", press: () {}),
+          TitleWithMoreBtn(title: "Foods", press: () {}),
           Kategori(),
-          TitleWithMoreBtn(title: "Featured Plants", press: () {}),
-          FeaturedPlants(),
+          TitleWithMoreBtn(title: "Beverages", press: () {}),
+          Minuman(),
           SizedBox(height: kDefaultPadding),
         ],
       ),
