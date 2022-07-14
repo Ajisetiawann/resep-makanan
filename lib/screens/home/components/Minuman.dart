@@ -16,9 +16,9 @@ class Minuman extends StatelessWidget {
       child: Row(
         children: <Widget>[
           KategoriCard(
-            image: "images/korean.jpg",
-            title: "Rendang",
-            country: "JAWA",
+            image: "images/mezcall.jpg",
+            title: "Mezcal",
+            country: "Hot Chocolate",
             press: () {
               Navigator.push(
                 context,
