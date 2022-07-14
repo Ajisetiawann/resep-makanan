@@ -2,6 +2,7 @@ import 'package:resep_makanan/dashboard.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:resep_makanan/home_screen.dart';
+import 'package:resep_makanan/kategori.dart';
 import 'package:resep_makanan/screens/home/components/kategori.dart';
 
 class BottomNavi extends StatefulWidget {
@@ -13,7 +14,7 @@ class _BottomNaviState extends State<BottomNavi> {
   int currentIndex = 0;
   final List<Widget> body = [
     HomeScreen(),
-    Kategori(),
+    KategoriMenu(),
     Dashboard(),
   ];
 
