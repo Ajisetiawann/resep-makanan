@@ -65,7 +65,7 @@ class RecipeModel {
       description: 'vegan caesar has never been easier thanks to this time saving hack!using hummus as the base of the dressing gives you richness while being both nug and dairy free.',
       cookingTime: 30,
       servings: 4,
-      imgPath: 'images/hummus.jpg',
+      imgPath: 'images/hummus.jpeg',
       ingredients: [
         '8 large eggs',
         '1 tsp. Dijon mustard',
