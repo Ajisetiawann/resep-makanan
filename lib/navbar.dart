@@ -41,10 +41,10 @@ class _BottomNaviState extends State<BottomNavi> {
               activeIcon: Icon(Icons.category_outlined, color: Colors.blue)),
           BottomNavigationBarItem(
               icon: Icon(
-                Icons.restaurant_menu_outlined,
+                Icons.category_outlined,
                 color: Colors.grey,
               ),
-              label: 'Menu',
+              label: 'Resep',
               activeIcon: Icon(Icons.restaurant_menu_outlined, color: Colors.blue)),
         ],
       ),
