@@ -29,7 +29,7 @@ class Kategori extends StatelessWidget {
             },
           ),
           KategoriCard(
-            image: "images/fancy.jpeg",
+            image: "images/honey.jpg",
             title: "Honey ",
             country: "Sriracha Bagel",
             press: () {
@@ -42,9 +42,9 @@ class Kategori extends StatelessWidget {
             },
           ),
           KategoriCard(
-            image: "images/fancy.jpeg",
-            title: "Fancy",
-            country: "Hash Brown",
+            image: "images/airfryer.jpg",
+            title: "Air",
+            country: "Fryer Mores",
             press: () {},
           ),
         ],
