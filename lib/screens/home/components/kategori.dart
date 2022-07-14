@@ -11,44 +11,58 @@ class Kategori extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
-      scrollDirection: Axis.vertical,
-      child: Row(
-        children: <Widget>[
-          KategoriCard(
-            image: "images/korean.jpg",
-            title: "Rendang",
-            country: "JAWA",
-            press: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => DetailKategori(),
+        scrollDirection: Axis.horizontal,
+        child: Row(children: <Widget>[
+          Container(
+            margin: EdgeInsets.symmetric(horizontal: 22, vertical: 10),
+            child: Column(
+              mainAxisSize: MainAxisSize.max,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Text(
+                    'Description',
+                    style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold, fontSize: 18),
+                    textAlign: TextAlign.left,
+                  ),
                 ),
-              );
-            },
-          ),
-          KategoriCard(
-            image: "images/waffle.jpg",
-            title: "Angelica",
-            country: "Russia",
-            press: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => DetailKategori(),
+                KategoriCard(
+                  image: "images/korean.jpg",
+                  title: "Rendang",
+                  country: "JAWA",
+                  press: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => DetailKategori(),
+                      ),
+                    );
+                  },
                 ),
-              );
-            },
-          ),
-          KategoriCard(
-            image: "images/korean.jpg",
-            title: "Samantha",
-            country: "Russia",
-            press: () {},
-          ),
-        ],
-      ),
-    );
+                KategoriCard(
+                  image: "images/waffle.jpg",
+                  title: "Angelica",
+                  country: "Russia",
+                  press: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => DetailKategori(),
+                      ),
+                    );
+                  },
+                ),
+                KategoriCard(
+                  image: "images/korean.jpg",
+                  title: "Samantha",
+                  country: "Russia",
+                  press: () {},
+                ),
+              ],
+            ),
+          )
+        ]));
   }
 }
 
