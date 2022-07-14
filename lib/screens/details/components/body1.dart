@@ -11,7 +11,7 @@ class Body1 extends StatelessWidget {
     return SingleChildScrollView(
       child: Column(
         children: <Widget>[
-          ImageIcons1(size: size),
+          ImageIcons1(sizze: size),
           TitleAndPrice(title: "Espresso ", country: "Martini"),
           SizedBox(height: kDefaultPadding),
           Row(

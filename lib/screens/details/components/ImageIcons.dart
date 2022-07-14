@@ -5,9 +5,9 @@ import '../../../constants.dart';
 import 'icon_card.dart';
 
 class ImageIcons1 extends StatelessWidget {
-  final Size size;
+  final Size sizze;
   const ImageIcons1({
-    required this.size,
+    required this.sizze,
   });
 
   @override
@@ -15,7 +15,7 @@ class ImageIcons1 extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.only(bottom: kDefaultPadding * 3),
       child: SizedBox(
-        height: size.height * 0.8,
+        height: sizze.height * 0.8,
         child: Row(
           children: <Widget>[
             Expanded(
@@ -42,8 +42,8 @@ class ImageIcons1 extends StatelessWidget {
               ),
             ),
             Container(
-              height: size.height * 0.8,
-              width: size.width * 0.75,
+              height: sizze.height * 0.8,
+              width: sizze.width * 0.75,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.only(
                   topLeft: Radius.circular(63),
