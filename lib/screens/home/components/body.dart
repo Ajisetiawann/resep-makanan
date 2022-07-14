@@ -30,7 +30,7 @@ class _MyHomePageState extends State<MyHomePage> {
       body: SafeArea(
         bottom: false,
         child: DefaultTabController(
-          length: 3,
+          length: 2,
           initialIndex: 0,
           child: Column(
             children: [
