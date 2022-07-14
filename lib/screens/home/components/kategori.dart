@@ -29,7 +29,7 @@ class Kategori extends StatelessWidget {
             },
           ),
           KategoriCard(
-            image: "images/honey.jpg",
+            image: "images/fancy.jpeg",
             title: "Honey ",
             country: "Sriracha Bagel",
             press: () {
