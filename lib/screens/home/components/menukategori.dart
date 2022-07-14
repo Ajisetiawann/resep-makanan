@@ -16,7 +16,6 @@ class MenuKategori extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
-          HeaderWithSearchBox(size: size),
           TitleWithMoreBtn(title: "Recomended", press: () {}),
           Kategori(),
           TitleWithMoreBtn(title: "Featured Plants", press: () {}),
