@@ -29,9 +29,9 @@ class Minuman extends StatelessWidget {
             },
           ),
           KategoriCard(
-            image: "images/waffle.jpg",
-            title: "Angelica",
-            country: "Russia",
+            image: "images/espresso.jpg",
+            title: "Espersso",
+            country: "Martini",
             press: () {
               Navigator.push(
                 context,
