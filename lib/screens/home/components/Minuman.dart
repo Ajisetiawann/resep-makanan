@@ -16,19 +16,6 @@ class Minuman extends StatelessWidget {
       child: Row(
         children: <Widget>[
           KategoriCard(
-            image: "images/mezcall.jpg",
-            title: "Mezcal",
-            country: "Hot Chocolate",
-            press: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => DetailsScreen(),
-                ),
-              );
-            },
-          ),
-          KategoriCard(
             image: "images/espresso.jpg",
             title: "Espersso",
             country: "Martini",
@@ -42,9 +29,22 @@ class Minuman extends StatelessWidget {
             },
           ),
           KategoriCard(
-            image: "images/korean.jpg",
-            title: "Samantha",
-            country: "Russia",
+            image: "images/mezcall.jpg",
+            title: "Mezcal",
+            country: "Hot Chocolate",
+            press: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => DetailsScreen(),
+                ),
+              );
+            },
+          ),
+          KategoriCard(
+            image: "images/whole.jpeg",
+            title: "Whole",
+            country: "Lime Margarita",
             press: () {},
           ),
         ],
