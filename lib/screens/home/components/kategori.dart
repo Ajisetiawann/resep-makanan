@@ -17,8 +17,8 @@ class Kategori extends StatelessWidget {
         children: <Widget>[
           KategoriCard(
             image: "images/korean.jpg",
-            title: "Rendang",
-            country: "JAWA",
+            title: "Korean",
+            country: "Corn Dogs",
             press: () {
               Navigator.push(
                 context,
@@ -29,9 +29,9 @@ class Kategori extends StatelessWidget {
             },
           ),
           KategoriCard(
-            image: "images/waffle.jpg",
-            title: "Angelica",
-            country: "Russia",
+            image: "images/honey.jpg",
+            title: "Honey ",
+            country: "Sriracha Bagel",
             press: () {
               Navigator.push(
                 context,
@@ -42,9 +42,9 @@ class Kategori extends StatelessWidget {
             },
           ),
           KategoriCard(
-            image: "images/korean.jpg",
-            title: "Samantha",
-            country: "Russia",
+            image: "images/fancy.jpeg",
+            title: "Fancy",
+            country: "Hash Brown",
             press: () {},
           ),
         ],
