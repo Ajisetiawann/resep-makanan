@@ -59,7 +59,7 @@ class ImageIcons1 extends StatelessWidget {
                 image: DecorationImage(
                   alignment: Alignment.centerLeft,
                   fit: BoxFit.cover,
-                  image: AssetImage("images/Espresso.jpg"),
+                  image: AssetImage("images/espresso.jpg"),
                 ),
               ),
             ),
