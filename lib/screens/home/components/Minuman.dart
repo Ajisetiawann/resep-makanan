@@ -23,7 +23,7 @@ class Minuman extends StatelessWidget {
               Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: (context) => DetailEspresso(),
+                  builder: (context) => DetailsScreen(),
                 ),
               );
             },
