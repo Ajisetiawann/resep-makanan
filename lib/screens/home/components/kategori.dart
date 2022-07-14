@@ -19,7 +19,6 @@ class Kategori extends StatelessWidget {
             style: TextStyle(fontSize: 22.0, color: Colors.black54),
           ),
           Spacer(),
-          Spacer(),
           KategoriCard(
             image: "images/korean.jpg",
             title: "Rendang",
