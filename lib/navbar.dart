@@ -34,14 +34,14 @@ class _BottomNaviState extends State<BottomNavi> {
               activeIcon: Icon(Icons.home_outlined, color: Colors.blue)),
           BottomNavigationBarItem(
               icon: Icon(
-                Icons.restaurant_menu_outlined,
+                Icons.category_outlined,
                 color: Colors.grey,
               ),
               label: 'Kategori',
               activeIcon: Icon(Icons.category_outlined, color: Colors.blue)),
           BottomNavigationBarItem(
               icon: Icon(
-                Icons.category_outlined,
+                Icons.restaurant_menu_outlined,
                 color: Colors.grey,
               ),
               label: 'Resep',

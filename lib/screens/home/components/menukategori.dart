@@ -6,7 +6,7 @@ import 'header_with_searchbox.dart';
 import 'kategori.dart';
 import 'title_with_more_bbtn.dart';
 
-class Body extends StatelessWidget {
+class MenuKategori extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // It will provie us total height  and width of our screen
