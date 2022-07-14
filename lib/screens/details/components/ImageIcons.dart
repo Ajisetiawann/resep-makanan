@@ -34,6 +34,7 @@ class ImageIcons1 extends StatelessWidget {
                       ),
                     ),
                     Spacer(),
+                    IconCard(icon: "images/sun.svg"),
                     IconCard(icon: "images/icon_2.svg"),
                     IconCard(icon: "images/icon_3.svg"),
                   ],
