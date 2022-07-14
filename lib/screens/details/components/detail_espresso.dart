@@ -4,7 +4,7 @@ import 'package:resep_makanan/constants.dart';
 import 'image_dan_icons.dart';
 import 'title_and_price.dart';
 
-class Body extends StatelessWidget {
+class DetailEspresso extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
