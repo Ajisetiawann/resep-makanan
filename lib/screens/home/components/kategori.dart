@@ -11,13 +11,9 @@ class Kategori extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
-      scrollDirection: Axis.horizontal,
+      scrollDirection: Axis.vertical,
       child: Row(
         children: <Widget>[
-          Text(
-            'Popular Dishes',
-            style: TextStyle(fontSize: 22.0, color: Colors.black54),
-          ),
           KategoriCard(
             image: "images/korean.jpg",
             title: "Rendang",
