@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_icons/flutter_icons.dart';
-import 'package:resep_makanan/models/resepmode.dart';
+import 'package:resep_makanan/models/resepmodel.dart';
 import 'package:resep_makanan/screens/details/components/detail_screen.dart';
 import 'package:resep_makanan/screens/details/components/detail_screen.dart';
+import 'package:resep_makanan/screens/details/components/resepdetail1.dart';
 
 import '../../../constants.dart';
 import '../../details/components/resepdetail.dart';
@@ -20,7 +21,7 @@ class Favorite extends StatelessWidget {
             ListView.builder(
               physics: ScrollPhysics(),
               shrinkWrap: true,
-              itemCount: RecipeModel.demoRecipe.length,
+              itemCount: RecipeModel1.demoRecipe.length,
               itemBuilder: (BuildContext context, int index) {
                 return Padding(
                   padding: const EdgeInsets.symmetric(
@@ -31,12 +32,12 @@ class Favorite extends StatelessWidget {
                     onTap: () => Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => RecipeDetails(
-                            recipeModel: RecipeModel.demoRecipe[index],
+                          builder: (context) => RecipeDetails1(
+                            recipeModel1: RecipeModel1.demoRecipe[index],
                           ),
                         )),
-                    child: RecipeCard(
-                      recipeModel: RecipeModel.demoRecipe[index],
+                    child: RecipeCard1(
+                      recipeModel1: RecipeModel1.demoRecipe[index],
                     ),
                   ),
                 );
@@ -49,18 +50,18 @@ class Favorite extends StatelessWidget {
   }
 }
 
-class RecipeCard extends StatefulWidget {
-  final RecipeModel recipeModel;
+class RecipeCard1 extends StatefulWidget {
+  final RecipeModel1 recipeModel1;
 
-  RecipeCard({
-    required this.recipeModel,
+  RecipeCard1({
+    required this.recipeModel1,
   });
 
   @override
-  _RecipeCardState createState() => _RecipeCardState();
+  _RecipeCard1State createState() => _RecipeCard1State();
 }
 
-class _RecipeCardState extends State<RecipeCard> {
+class _RecipeCard1State extends State<RecipeCard1> {
   bool loved = false;
   bool saved = false;
   @override
@@ -75,12 +76,12 @@ class _RecipeCardState extends State<RecipeCard> {
               child: ClipRRect(
                 borderRadius: BorderRadius.circular(24),
                 child: Hero(
-                  tag: widget.recipeModel.imgPath,
+                  tag: widget.recipeModel1.imgPath,
                   child: Image(
                     height: 320,
                     width: 320,
                     fit: BoxFit.cover,
-                    image: AssetImage(widget.recipeModel.imgPath),
+                    image: AssetImage(widget.recipeModel1.imgPath),
                   ),
                 ),
               ),
@@ -117,7 +118,7 @@ class _RecipeCardState extends State<RecipeCard> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      widget.recipeModel.title,
+                      widget.recipeModel1.title,
                       style: Theme.of(context).textTheme.subtitle1,
                     ),
                     SizedBox(
@@ -142,7 +143,7 @@ class _RecipeCardState extends State<RecipeCard> {
                       width: 4,
                     ),
                     Text(
-                      widget.recipeModel.cookingTime.toString() + '\'',
+                      widget.recipeModel1.cookingTime.toString() + '\'',
                       style: TextStyle(color: Colors.black),
                     ),
                     Spacer(),
