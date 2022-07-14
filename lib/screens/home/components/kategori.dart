@@ -18,7 +18,6 @@ class Kategori extends StatelessWidget {
             'Popular Dishes',
             style: TextStyle(fontSize: 22.0, color: Colors.black54),
           ),
-          Spacer(),
           KategoriCard(
             image: "images/korean.jpg",
             title: "Rendang",
