@@ -45,9 +45,6 @@ class _MyHomePageState extends State<MyHomePage> {
                     text: "New Resep".toUpperCase(),
                   ),
                   Tab(
-                    text: "Kategori".toUpperCase(),
-                  ),
-                  Tab(
                     text: "Favorit".toUpperCase(),
                   ),
                 ],
@@ -72,13 +69,6 @@ class _MyHomePageState extends State<MyHomePage> {
                   children: <Widget>[
                     NewResep(),
                     Favorite(),
-                    Container(
-                      child: Center(
-                        child: Text(
-                          'Cetegories',
-                        ),
-                      ),
-                    ),
                   ],
                 ),
               )
